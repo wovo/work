@@ -250,9 +250,9 @@ class holonite_automatic_waxing_machine_controller:
         self._cycle = None  
         self._profiles = None      
         
-    def _update_cycle( self, data ):
+    def _update_cycle( self, data, forced = False ):
         cycle = data[ "cycle" ]
-        if cycle != self._cycle:
+        if ( cycle != self._cycle ) or forced:
             self._log( f"==== new cycle {cycle}" )
             self._reset()    
             self._cycle = cycle        
@@ -266,7 +266,7 @@ class holonite_automatic_waxing_machine_controller:
         if self._dump_profiles:
             with open( f"profile-{self._cycle}.json", "w" ) as dump_file:
                 dump_file.write( f"{data}" )
-        self._update_cycle( data )
+        self._update_cycle( data, forced = True )
         self._profiles = data[ "heights" ]
         #with open( f"profiles-{self._cycle}.pickle", "wb" ) as file:
         #    pickle.dump( self._profiles, file)
