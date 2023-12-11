@@ -6,44 +6,60 @@
 #
 # main, ros2 and mqtt communication
 #
-# ToDo
-# - header, copyright, etc.
-# - python conventions
-# - test???
-# - profile problems
-# - dump a mould that gives an error? pickle?
-# 
-#
 # ===========================================================================
 
 import random
 import time
 import json
 import pickle
-import datetime
 
+# ROS2
+import rclpy
+from rclpy.node import Node
+import std_msgs
+from std_msgs.msg import String
 
 # MQTT
 from paho.mqtt import client as paho_mqtt
+# import paho.mqtt
 
-# camera
-import ifm3dpy
-
-# stubbed path
-import carlos_path
+class PathError( ValueError ): pass
 
 
 # ===========================================================================
 
+
 # stub
-class PathError( ValueError ): pass
 def plan_path( 
     cycle,
     coordinates, 
     images, 
     profiles 
 ):
-    return carlos_path.carlos_path( cycle )
+    print( "PATH PLANNING" )
+    print( f"    cycle : {cycle}" )
+    print( f"    coordinates : {coordinates}" )
+    print( f"    profiles : {profiles}" )
+
+
+    return {  
+            "cycle": cycle,
+            "steps": [  
+                {
+                    "destination": {  
+                        "x": 9,  
+                        "y": 9, 
+                        "z": 9  
+                    }, 
+                    "maximum_speed": {  
+                        "x": 9,  
+                        "y": 9, 
+                        "z": 9  
+                    }, 
+                    "spraying": "true" 
+                }
+            ] 
+        } 
 
 
 # ===========================================================================
@@ -53,19 +69,13 @@ def plan_path(
 # ===========================================================================
 
 class wouter_camera:
-    address = "192.168.0.69"
+    topic = "camera_data"
     
 class carlos_mqtt:
-    broker = "192.168.0.110"
+    broker = "192.168.0.114"
     port = 1883
     username = "test"
     password = "test"
-
-    
-# ===========================================================================
-
-def now_string():
-    return datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
 
 # ===========================================================================
@@ -76,10 +86,9 @@ def now_string():
 
 class mqtt_client:
 
-    def __init__( self, settings, log ): 
+    def __init__( self, settings ): 
         client_id = f'publish-{random.randint(0, 1000)}'
         self._client = paho_mqtt.Client( client_id )
-        self._log = log
         
         self._client.on_connect = \
             lambda a, b, c, d: self.on_connect( a, b, c, d )
@@ -96,9 +105,9 @@ class mqtt_client:
 
     def on_connect( self, client, userdata, flags, rc ) :
         if rc == 0:
-            self._log( "MQTT broker connected")
+            print( "Connected to MQTT Broker!")
         else:
-            self._log( f"Failed to connect, return code {rc}\n")        
+            print( f"Failed to connect, return code {rc}\n")        
             
     def spin_once( self ):
         self._client.loop(timeout=0)    
@@ -122,53 +131,26 @@ class mqtt_client:
 
 # ===========================================================================
 #
-# O3D camera interface
+# ROS2 connection
 #
 # ===========================================================================
 
-class camera:
+class ros_node( Node ):
 
-    def __init__( self, config, callback, log ):
-        self._callback = callback
-        self._frame = None
-        self._config = config
-        self._connected = False
-        self._log = log
-        
-    def _connect( self ):
-        if self._connected:
-            return
-            
-        try:
-        
-            self._camera = ifm3dpy.device.Device( ip = self._config.address )
-            self._grabber = ifm3dpy.framegrabber.FrameGrabber( self._camera )
-            self._grabber.start()  
-            self._connected = True
-            self._log( "camera connected" )
-            
-        except Exception as e:
-            self._log( f"camera not connected:\n{e }" )
+    def __init__( self ):
+        rclpy.init()    
+        super().__init__( "aws" )
 
     def spin_once( self ):
-        self._connect()
+        rclpy.spin_once( self, timeout_sec = 0 )    
         
-        if not self._connected:
-            return
-    
-        try:
-            if self._frame is None:
-                self._frame = self._grabber.wait_for_frame()
-            
-            ready, frame = self._frame.wait_for( 0 )   
-            if ready:
-                buffer = frame.get_buffer( frame.get_buffers()[ 0 ] )
-                self._frame = self._grabber.wait_for_frame()
-                self._callback( buffer )            
-                
-        except Exception as e:
-            self._connected = False
-            self._log( f"camera disconnected:\n{e }" )                
+    def subscribe( self, topic_name, callback ):
+        self.create_subscription(
+            std_msgs.msg.UInt8MultiArray,
+            topic_name,
+            callback,
+            10
+        )    
 
 
 # ===========================================================================
@@ -177,32 +159,16 @@ class camera:
 #
 # ===========================================================================
 
-class holonite_automatic_waxing_machine_controller:
+class holonite_automatic_waxing_machine:
 
-    def __init__( 
-        self, 
-        camera_config, 
-        mqtt_config,
-        log_file_name = None,
-        dump_profiles = False,
-        dump_path_errors = False
-    ):
-    
-        self._log_file_name = log_file_name
-        self._dump_profiles = dump_profiles
-        self._dump_path_errors = dump_path_errors
-        self._log( "===== startup" )
-        self._log( "connect to the camera" )
-        self._camera = camera( 
-            camera_config, 
-            lambda data: self._receive_image( data ),
-            lambda s: self._log( s )
-        )
-        
+    def __init__( self, ros_config, mqtt_config ):
+        self._log( "create ROS2 node" )
+        self._ros = ros_node()
         self._log( "connect MQTT" )
-        self._mqtt = mqtt_client( 
-            mqtt_config,
-            lambda s: self._log( s )        
+        self._mqtt = mqtt_client( mqtt_config )
+        self._ros.subscribe( 
+            ros_config.topic, 
+            lambda data: self._receive_image( data )
         )
         self._mqtt.subscribe( 
             "profiles", 
@@ -216,12 +182,11 @@ class holonite_automatic_waxing_machine_controller:
             "path_request", 
             lambda data: self._receive_path_request( data )
         )
-        
         self._reset()
-        self._log( "start the engine" )
+        self._log( "start" )
         
     def spin_once( self ):
-        self._camera.spin_once()
+        self._ros.spin_once()
         self._mqtt.spin_once()      
         
     def spin( self, sleep_time = 0.001 ):
@@ -230,16 +195,12 @@ class holonite_automatic_waxing_machine_controller:
             time.sleep( sleep_time )
             
     def _log( self, message ):
-        s = f"{now_string()} : {message}"
-        print( s )
-        if self._log_file_name is not None:
-            with open( self._log_file_name, "a+" ) as log_file:
-                log_file.write( s + "\n" )
+        print( message )
                     
             
     # =======================================================================        
     #
-    # processing "state machine"
+    # state machine
     #
     # =======================================================================       
     
@@ -253,30 +214,27 @@ class holonite_automatic_waxing_machine_controller:
     def _update_cycle( self, data ):
         cycle = data[ "cycle" ]
         if cycle != self._cycle:
-            self._log( f"==== new cycle {cycle}" )
+            self._log( f"    new cycle {cycle}" )
             self._reset()    
             self._cycle = cycle        
             
     def _receive_image( self, data ):
-        self._log( f"image received #{1+len(self._images)}" )
+        self._log( "image received" )
         self._images.append( data )
         
     def _receive_profiles( self, data ):
         self._log( "profiles received " )
-        if self._dump_profiles:
-            with open( f"profile-{self._cycle}.json", "w" ) as dump_file:
-                dump_file.write( f"{data}" )
+        print( f"{data}" )
         self._update_cycle( data )
         self._profiles = data[ "heights" ]
-        #with open( f"profiles-{self._cycle}.pickle", "wb" ) as file:
-        #    pickle.dump( self._profiles, file)
+        with open( f"profiles-{self._cycle}.pickle", "wb" ) as file:
+            pickle.dump( self._profiles, file)
 
     def _receive_image_coordinates( self, data ):
         self._log( "image coordinates received" )
-        #print( f"{data}" )
+        print( f"{data}" )
         self._update_cycle( data )
         coordinate = data[ "xCoordinate" ]
-        self._log( f"coordinates received #{1+len(self._coordinates)}" )        
         self._coordinates.append( coordinate )      
 
     def _receive_path_request( self, data ):
@@ -290,7 +248,7 @@ class holonite_automatic_waxing_machine_controller:
             
         n = len( self._images )
         if n != self._expected_number_of_images:
-            self._send_path_error( f"invalid number of images: {n}" )
+            self._send_path_error( f"invalid number of images {n}" )
             return
         
         if self._profiles is None:
@@ -306,19 +264,6 @@ class holonite_automatic_waxing_machine_controller:
             )
         except PathError as e:
             self._send_path_error( str( e ) )
-            
-            if self._dump_path_errors:
-                path = f"path-error-{now_string()}"
-                os.makedirs( path, exist_ok = True )
-                with open( f"{path}/error.txt", "w" ) as file:
-                    file.write( f"{e}" )                  
-                with open( f"{path}/profile.pickle", "w" ) as file:
-                    pickle.dump( self._profile, file )       
-                for n, image in enumerate( self._images ):
-                    with open( f"{path}/image_{n}.pickle", "w" ) as file:
-                        pickle.dump( image, file)      
-                
-            
             return
             
         self._send_path_response( path )    
@@ -336,15 +281,57 @@ class holonite_automatic_waxing_machine_controller:
 
 # ===========================================================================
 
+
+     
+# MQTT
+def publish( client):
+    
+    msg_json = {  
+            "cycle": 9,
+            "steps": [  
+                {
+                    "destination": {  
+                        "x": 9,  
+                        "y": 9, 
+                        "z": 9  
+                    }, 
+                    "maximum_speed": {  
+                        "x": 9,  
+                        "y": 9, 
+                        "z": 9  
+                    }, 
+                    "spraying": "true" 
+                }
+            ] 
+        }   
+    
+    # while True:
+    time.sleep(1)
+    msg = f"messages: {msg_json}"
+    result = client.publish(topic_path_response, msg)
+    # result: [0, 1]
+    status = result[0]
+    if status == 0:
+        print(f"Send `{msg}` to topic `{topic_path_response}`")
+    else:
+        print(f"Failed to send message to topic {topic_path_response}")
+
+
+# ===========================================================================
+
+    
+def main(args=None):
+    m = holonite_automatic_waxing_machine( 
+        wouter_camera, 
+        carlos_mqtt 
+    )
+    m.spin()
+
 if __name__ == '__main__':
-    m = holonite_automatic_waxing_machine_controller( 
-        camera_config = wouter_camera, 
-        mqtt_config = carlos_mqtt,
-        log_file_name = "logging.txt",
-        dump_profiles = True,
-        dump_path_errors = True
+    m = holonite_automatic_waxing_machine( 
+        ros_config = wouter_camera, 
+        mqtt_config = carlos_mqtt 
     )
     m.spin()
 
     
-# ===========================================================================
