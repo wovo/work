@@ -1,4 +1,7 @@
+import patherror
+
 def carlos_path( cycle ):
+    #raise patherror.PathError( "Hi Carlos, time for lunch" )
     return {
         "cycle": cycle, 
         "steps" :[

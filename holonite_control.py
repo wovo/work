@@ -12,7 +12,10 @@
 # - test???
 # - profile problems
 # - dump a mould that gives an error? pickle?
-# 
+# - save data, for later playback
+# - playback tool for kamal
+# - handle Mqtt not available timeout
+# - camera disconnect gives loads of message, wait some time before retry?
 #
 # ===========================================================================
 
@@ -21,6 +24,7 @@ import time
 import json
 import pickle
 import datetime
+import os
 
 
 # MQTT
@@ -30,13 +34,13 @@ from paho.mqtt import client as paho_mqtt
 import ifm3dpy
 
 # stubbed path
+import patherror
 import carlos_path
 
 
 # ===========================================================================
 
 # stub
-class PathError( ValueError ): pass
 def plan_path( 
     cycle,
     coordinates, 
@@ -48,24 +52,44 @@ def plan_path(
 
 # ===========================================================================
 #
-# interface details
+# configuration details
 #
 # ===========================================================================
 
 class wouter_camera:
     address = "192.168.0.69"
+    reconnect_timout = 10
     
 class carlos_mqtt:
-    broker = "192.168.0.110"
+    broker = "192.168.0.113"
     port = 1883
     username = "test"
     password = "test"
+    reconnect_timout = 10    
 
     
 # ===========================================================================
 
-def now_string():
-    return datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+def now_string( filename = False ):
+    return datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S:%f")
+    
+def now_filename():
+    return now_string().replace( "/", "-" ).replace( ":", "-" )
+    
+class data:
+    def __init__( self, cycle, coordinates, images, profiles )
+        self._cycle = cycle
+        self._coordinates = coordinates
+        self._images = iages
+        self._profiles = profiles
+        
+    def plan_path( self ):    
+        return plan_path(
+            self._cycle,
+            self._coordinates,
+            self._images,
+            self._profiles
+        )
 
 
 # ===========================================================================
@@ -76,23 +100,41 @@ def now_string():
 
 class mqtt_client:
 
-    def __init__( self, settings, log ): 
+    def __init__( self, config, log ): 
         client_id = f'publish-{random.randint(0, 1000)}'
         self._client = paho_mqtt.Client( client_id )
         self._log = log
+        self._connected = False
+        self._config = config
+        self._last_attempt = time.time() - self._config.reconnect_timout
+        self._subscriptions = []
         
         self._client.on_connect = \
             lambda a, b, c, d: self.on_connect( a, b, c, d )
        
-        
         self._client.username_pw_set( 
-            settings.username, 
-            settings.password 
+            self._config.username, 
+            self._config.password 
         )
-        self._client.connect( 
-            settings.broker, 
-            settings.port 
-        )       
+        
+    def _connect( self ):
+        if self._connected:
+            return
+            
+        if time.time() - self._last_attempt < self._config.reconnect_timout:   
+            return
+            
+        try:
+            self._client.connect( 
+                self._config.broker, 
+                self._config.port 
+            )       
+            for topic_name, callback in self._subscriptions:
+                self._subscribe( topic_name, callback )
+            self._connected = True
+            
+        except TimeoutError as e:    
+            self._log( f"MQTT not connected:\n{e}" )            
 
     def on_connect( self, client, userdata, flags, rc ) :
         if rc == 0:
@@ -101,15 +143,21 @@ class mqtt_client:
             self._log( f"Failed to connect, return code {rc}\n")        
             
     def spin_once( self ):
-        self._client.loop(timeout=0)    
-        
-    def subscribe( self, topic_name, callback ):  
+        self._connect()
+        self._client.loop( timeout = 0 )   
+
+    def _subscribe( self, topic_name, callback ):  
         self._client.subscribe( topic_name )            
         self._client.message_callback_add(
             topic_name,
             lambda client, userdata, message: 
                 callback( json.loads( message.payload.decode()) )
-        )
+        )   
+        
+    def subscribe( self, topic_name, callback ):  
+        self._subscriptions.append( [ topic_name, callback ] )
+        if self._connected:
+            self._subscribe( topic_name, callback )
         
     def publish( self, topic, data ):
         self._client.publish( 
@@ -134,13 +182,18 @@ class camera:
         self._config = config
         self._connected = False
         self._log = log
+        self._last_attempt = time.time() - self._config.reconnect_timout
         
     def _connect( self ):
         if self._connected:
             return
             
+        if  time.time() - self._last_attempt< self._config.reconnect_timout:   
+            return
+            
         try:
         
+            self._last_attempt = time.time()
             self._camera = ifm3dpy.device.Device( ip = self._config.address )
             self._grabber = ifm3dpy.framegrabber.FrameGrabber( self._camera )
             self._grabber.start()  
@@ -148,7 +201,7 @@ class camera:
             self._log( "camera connected" )
             
         except Exception as e:
-            self._log( f"camera not connected:\n{e }" )
+            self._log( f"camera not connected:\n{e}" )
 
     def spin_once( self ):
         self._connect()
@@ -297,25 +350,28 @@ class holonite_automatic_waxing_machine_controller:
             self._send_path_error( f"no profiles" )
             return
             
+        data = path_data(             
+            self._cycle,
+            self._coordinates, 
+            self._images, 
+            self._profiles 
+            )  
+            
         try:    
-            path = plan_path( 
-                self._cycle,
-                self._coordinates, 
-                self._images, 
-                self._profiles 
-            )
-        except PathError as e:
+            path = data.plan_path()
+
+        except patherror.PathError as e:
             self._send_path_error( str( e ) )
             
-            if self._dump_path_errors:
-                path = f"path-error-{now_string()}"
+            if False and self._dump_path_errors:
+                path = f"path-error-{now_filename()}"
                 os.makedirs( path, exist_ok = True )
                 with open( f"{path}/error.txt", "w" ) as file:
                     file.write( f"{e}" )                  
                 with open( f"{path}/profile.pickle", "w" ) as file:
-                    pickle.dump( self._profile, file )       
+                    pickle.dump( self._profiles, file )       
                 for n, image in enumerate( self._images ):
-                    with open( f"{path}/image_{n}.pickle", "w" ) as file:
+                    with open( f"{path}/image-{n}.pickle", "w" ) as file:
                         pickle.dump( image, file)      
                 
             
@@ -325,16 +381,25 @@ class holonite_automatic_waxing_machine_controller:
         
     def _send_path_response( self, path ):
         self._log( "path response sent" )
-        self._mqtt.publish( "path_response", path )
+        self._mqtt.publish( 
+            "path_response", 
+            path 
+        )
     
     def _send_path_error( self, error ):
         self._log( f"path error sent [{error}]" )    
-        self._mqtt.publish( "error", error )
+        self._mqtt.publish( 
+            "path_error", 
+            { 
+                "cycle": self._cycle, 
+                "error": error 
+            }
+        )    
         
     # =======================================================================        
 
 
-# ===========================================================================
+# ===========================================================================      
 
 if __name__ == '__main__':
     m = holonite_automatic_waxing_machine_controller( 
@@ -348,3 +413,4 @@ if __name__ == '__main__':
 
     
 # ===========================================================================
+

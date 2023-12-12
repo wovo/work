@@ -1,589 +1,1316 @@
-2023/12/11 10:52:13 ===== startup
-2023/12/11 10:52:13 connect to the camera
-2023/12/11 10:52:13 connect MQTT
-2023/12/11 10:52:13 start the engine
-2023/12/11 10:52:13 camera connected
-2023/12/11 10:52:13 MQTT broker connected
-2023/12/11 11:01:17 ===== startup
-2023/12/11 11:01:17 connect to the camera
-2023/12/11 11:01:17 connect MQTT
-2023/12/11 11:01:17 start the engine
-2023/12/11 11:01:17 camera connected
-2023/12/11 11:01:17 MQTT broker connected
-2023/12/11 11:15:28 profiles received 
-2023/12/11 11:15:28 ==== new cycle 2
-2023/12/11 11:15:28 image coordinates received
-2023/12/11 11:15:28 coordinates received #1
-2023/12/11 11:15:28 image coordinates received
-2023/12/11 11:15:28 coordinates received #2
-2023/12/11 11:15:29 image coordinates received
-2023/12/11 11:15:29 coordinates received #3
-2023/12/11 11:15:29 image coordinates received
-2023/12/11 11:15:29 coordinates received #4
-2023/12/11 11:15:30 image coordinates received
-2023/12/11 11:15:30 coordinates received #5
-2023/12/11 11:15:31 image coordinates received
-2023/12/11 11:15:31 coordinates received #6
-2023/12/11 11:15:31 image coordinates received
-2023/12/11 11:15:31 coordinates received #7
-2023/12/11 11:15:32 image coordinates received
-2023/12/11 11:15:32 coordinates received #8
-2023/12/11 11:15:32 image coordinates received
-2023/12/11 11:15:32 coordinates received #9
-2023/12/11 11:15:33 image coordinates received
-2023/12/11 11:15:33 coordinates received #10
-2023/12/11 11:15:34 image coordinates received
-2023/12/11 11:15:34 coordinates received #11
-2023/12/11 11:15:34 image coordinates received
-2023/12/11 11:15:34 coordinates received #12
-2023/12/11 11:15:35 image coordinates received
-2023/12/11 11:15:35 coordinates received #13
-2023/12/11 11:15:36 image coordinates received
-2023/12/11 11:15:36 coordinates received #14
-2023/12/11 11:15:36 image coordinates received
-2023/12/11 11:15:36 coordinates received #15
-2023/12/11 11:15:37 path request received
-2023/12/11 11:15:37 path error sent [invalid number of images: 0]
-2023/12/11 11:16:43 ===== startup
-2023/12/11 11:16:43 connect to the camera
-2023/12/11 11:16:43 connect MQTT
-2023/12/11 11:16:43 start the engine
-2023/12/11 11:16:43 camera connected
-2023/12/11 11:16:43 MQTT broker connected
-2023/12/11 11:17:08 image received #1
-2023/12/11 11:17:09 image received #2
-2023/12/11 11:17:10 image received #3
-2023/12/11 11:17:11 image received #4
-2023/12/11 11:17:12 image received #5
-2023/12/11 11:17:13 image received #6
-2023/12/11 11:17:20 ===== startup
-2023/12/11 11:17:20 connect to the camera
-2023/12/11 11:17:20 connect MQTT
-2023/12/11 11:17:20 start the engine
-2023/12/11 11:17:20 camera connected
-2023/12/11 11:17:20 MQTT broker connected
-2023/12/11 11:18:03 profiles received 
-2023/12/11 11:18:03 ==== new cycle 2
-2023/12/11 11:18:03 image coordinates received
-2023/12/11 11:18:03 coordinates received #1
-2023/12/11 11:18:04 image received #1
-2023/12/11 11:18:04 image coordinates received
-2023/12/11 11:18:04 coordinates received #2
-2023/12/11 11:18:04 image received #2
-2023/12/11 11:18:04 image coordinates received
-2023/12/11 11:18:04 coordinates received #3
-2023/12/11 11:18:05 image received #3
-2023/12/11 11:18:05 image coordinates received
-2023/12/11 11:18:05 coordinates received #4
-2023/12/11 11:18:05 image received #4
-2023/12/11 11:18:06 image coordinates received
-2023/12/11 11:18:06 coordinates received #5
-2023/12/11 11:18:06 image received #5
-2023/12/11 11:18:06 image coordinates received
-2023/12/11 11:18:06 coordinates received #6
-2023/12/11 11:18:07 image received #6
-2023/12/11 11:18:07 image coordinates received
-2023/12/11 11:18:07 coordinates received #7
-2023/12/11 11:18:07 image received #7
-2023/12/11 11:18:07 image coordinates received
-2023/12/11 11:18:08 coordinates received #8
-2023/12/11 11:18:08 image received #8
-2023/12/11 11:18:08 image coordinates received
-2023/12/11 11:18:08 coordinates received #9
-2023/12/11 11:18:08 image received #9
-2023/12/11 11:18:09 image coordinates received
-2023/12/11 11:18:09 coordinates received #10
-2023/12/11 11:18:09 image received #10
-2023/12/11 11:18:09 image coordinates received
-2023/12/11 11:18:09 coordinates received #11
-2023/12/11 11:18:10 image received #11
-2023/12/11 11:18:10 image coordinates received
-2023/12/11 11:18:10 coordinates received #12
-2023/12/11 11:18:10 image received #12
-2023/12/11 11:18:11 image coordinates received
-2023/12/11 11:18:11 coordinates received #13
-2023/12/11 11:18:11 image received #13
-2023/12/11 11:18:11 image coordinates received
-2023/12/11 11:18:11 coordinates received #14
-2023/12/11 11:18:11 image received #14
-2023/12/11 11:18:12 image coordinates received
-2023/12/11 11:18:12 coordinates received #15
-2023/12/11 11:18:12 image received #15
-2023/12/11 11:18:13 path request received
-2023/12/11 11:18:13 path response sent
-2023/12/11 11:19:22 profiles received 
-2023/12/11 11:19:22 image coordinates received
-2023/12/11 11:19:22 coordinates received #16
-2023/12/11 11:19:22 image received #16
-2023/12/11 11:19:23 image coordinates received
-2023/12/11 11:19:23 coordinates received #17
-2023/12/11 11:19:23 image received #17
-2023/12/11 11:19:23 image coordinates received
-2023/12/11 11:19:23 coordinates received #18
-2023/12/11 11:19:23 image received #18
-2023/12/11 11:19:24 image coordinates received
-2023/12/11 11:19:24 coordinates received #19
-2023/12/11 11:19:24 image received #19
-2023/12/11 11:19:24 image coordinates received
-2023/12/11 11:19:24 coordinates received #20
-2023/12/11 11:19:25 image received #20
-2023/12/11 11:19:25 image coordinates received
-2023/12/11 11:19:25 coordinates received #21
-2023/12/11 11:19:25 image received #21
-2023/12/11 11:19:26 image coordinates received
-2023/12/11 11:19:26 coordinates received #22
-2023/12/11 11:19:26 image received #22
-2023/12/11 11:19:26 image coordinates received
-2023/12/11 11:19:26 coordinates received #23
-2023/12/11 11:19:27 image received #23
-2023/12/11 11:19:27 image coordinates received
-2023/12/11 11:19:27 coordinates received #24
-2023/12/11 11:19:27 image received #24
-2023/12/11 11:19:27 image coordinates received
-2023/12/11 11:19:27 coordinates received #25
-2023/12/11 11:19:28 image received #25
-2023/12/11 11:19:28 image coordinates received
-2023/12/11 11:19:28 coordinates received #26
-2023/12/11 11:19:28 image received #26
-2023/12/11 11:19:29 image coordinates received
-2023/12/11 11:19:29 coordinates received #27
-2023/12/11 11:19:29 image received #27
-2023/12/11 11:19:29 image coordinates received
-2023/12/11 11:19:29 coordinates received #28
-2023/12/11 11:19:30 image received #28
-2023/12/11 11:19:30 image coordinates received
-2023/12/11 11:19:30 coordinates received #29
-2023/12/11 11:19:30 image received #29
-2023/12/11 11:19:31 image coordinates received
-2023/12/11 11:19:31 coordinates received #30
-2023/12/11 11:19:31 image received #30
-2023/12/11 11:19:32 path request received
-2023/12/11 11:19:32 path error sent [invalid number of coordinates: 30]
-2023/12/11 11:23:19 ===== startup
-2023/12/11 11:23:19 connect to the camera
-2023/12/11 11:23:19 connect MQTT
-2023/12/11 11:23:19 start the engine
-2023/12/11 11:23:19 camera connected
-2023/12/11 11:23:19 MQTT broker connected
-2023/12/11 11:25:16 profiles received 
-2023/12/11 11:25:16 ==== new cycle 1
-2023/12/11 11:25:16 image coordinates received
-2023/12/11 11:25:16 coordinates received #1
-2023/12/11 11:25:17 image received #1
-2023/12/11 11:25:17 image coordinates received
-2023/12/11 11:25:17 coordinates received #2
-2023/12/11 11:25:17 image received #2
-2023/12/11 11:25:18 image coordinates received
-2023/12/11 11:25:18 coordinates received #3
-2023/12/11 11:25:18 image received #3
-2023/12/11 11:25:18 image coordinates received
-2023/12/11 11:25:18 coordinates received #4
-2023/12/11 11:25:18 image received #4
-2023/12/11 11:25:19 image coordinates received
-2023/12/11 11:25:19 coordinates received #5
-2023/12/11 11:25:19 image received #5
-2023/12/11 11:25:19 image coordinates received
-2023/12/11 11:25:19 coordinates received #6
-2023/12/11 11:25:20 image received #6
-2023/12/11 11:25:20 image coordinates received
-2023/12/11 11:25:20 coordinates received #7
-2023/12/11 11:25:20 image received #7
-2023/12/11 11:25:21 image coordinates received
-2023/12/11 11:25:21 coordinates received #8
-2023/12/11 11:25:21 image received #8
-2023/12/11 11:25:21 image coordinates received
-2023/12/11 11:25:21 coordinates received #9
-2023/12/11 11:25:22 image received #9
-2023/12/11 11:25:22 image coordinates received
-2023/12/11 11:25:22 coordinates received #10
-2023/12/11 11:25:22 image received #10
-2023/12/11 11:25:23 image coordinates received
-2023/12/11 11:25:23 coordinates received #11
-2023/12/11 11:25:23 image received #11
-2023/12/11 11:25:23 image coordinates received
-2023/12/11 11:25:23 coordinates received #12
-2023/12/11 11:25:23 image received #12
-2023/12/11 11:25:24 image coordinates received
-2023/12/11 11:25:24 coordinates received #13
-2023/12/11 11:25:24 image received #13
-2023/12/11 11:25:24 image coordinates received
-2023/12/11 11:25:24 coordinates received #14
-2023/12/11 11:25:25 image received #14
-2023/12/11 11:25:25 image coordinates received
-2023/12/11 11:25:25 coordinates received #15
-2023/12/11 11:25:25 image received #15
-2023/12/11 11:25:26 path request received
-2023/12/11 11:25:26 path response sent
-2023/12/11 11:28:42 profiles received 
-2023/12/11 11:28:42 ==== new cycle 2
-2023/12/11 11:28:42 image coordinates received
-2023/12/11 11:28:42 coordinates received #1
-2023/12/11 11:28:42 image received #1
-2023/12/11 11:28:42 image coordinates received
-2023/12/11 11:28:42 coordinates received #2
-2023/12/11 11:28:43 image received #2
-2023/12/11 11:28:43 image coordinates received
-2023/12/11 11:28:43 coordinates received #3
-2023/12/11 11:28:43 image received #3
-2023/12/11 11:28:44 image coordinates received
-2023/12/11 11:28:44 coordinates received #4
-2023/12/11 11:28:44 image received #4
-2023/12/11 11:28:44 image coordinates received
-2023/12/11 11:28:44 coordinates received #5
-2023/12/11 11:28:44 image received #5
-2023/12/11 11:28:45 image coordinates received
-2023/12/11 11:28:45 coordinates received #6
-2023/12/11 11:28:45 image received #6
-2023/12/11 11:28:45 image coordinates received
-2023/12/11 11:28:45 coordinates received #7
-2023/12/11 11:28:46 image received #7
-2023/12/11 11:28:46 image coordinates received
-2023/12/11 11:28:46 coordinates received #8
-2023/12/11 11:28:46 image received #8
-2023/12/11 11:28:47 image coordinates received
-2023/12/11 11:28:47 coordinates received #9
-2023/12/11 11:28:47 image received #9
-2023/12/11 11:28:47 image coordinates received
-2023/12/11 11:28:47 coordinates received #10
-2023/12/11 11:28:48 image received #10
-2023/12/11 11:28:48 image coordinates received
-2023/12/11 11:28:48 coordinates received #11
-2023/12/11 11:28:48 image received #11
-2023/12/11 11:28:49 image coordinates received
-2023/12/11 11:28:49 coordinates received #12
-2023/12/11 11:28:49 image received #12
-2023/12/11 11:28:49 image coordinates received
-2023/12/11 11:28:49 coordinates received #13
-2023/12/11 11:28:49 image received #13
-2023/12/11 11:28:50 image coordinates received
-2023/12/11 11:28:50 coordinates received #14
-2023/12/11 11:28:50 image received #14
-2023/12/11 11:28:50 image coordinates received
-2023/12/11 11:28:50 coordinates received #15
-2023/12/11 11:28:51 image received #15
-2023/12/11 11:28:51 path request received
-2023/12/11 11:28:51 path response sent
-2023/12/11 11:34:24 : ===== startup
-2023/12/11 11:34:24 : connect to the camera
-2023/12/11 11:34:24 : connect MQTT
-2023/12/11 11:34:24 : start the engine
-2023/12/11 11:34:24 : camera connected
-2023/12/11 11:34:24 : MQTT broker connected
-2023/12/11 11:36:05 : ===== startup
-2023/12/11 11:36:05 : connect to the camera
-2023/12/11 11:36:05 : connect MQTT
-2023/12/11 11:36:05 : start the engine
-2023/12/11 11:36:05 : camera connected
-2023/12/11 11:36:05 : MQTT broker connected
-2023/12/11 11:36:24 : profiles received 
-2023/12/11 11:36:24 : ==== new cycle 4
-2023/12/11 11:36:24 : image coordinates received
-2023/12/11 11:36:24 : coordinates received #1
-2023/12/11 11:36:24 : image received #1
-2023/12/11 11:36:24 : image coordinates received
-2023/12/11 11:36:24 : coordinates received #2
-2023/12/11 11:36:25 : image received #2
-2023/12/11 11:36:25 : image coordinates received
-2023/12/11 11:36:25 : coordinates received #3
-2023/12/11 11:36:25 : image received #3
-2023/12/11 11:36:26 : image coordinates received
-2023/12/11 11:36:26 : coordinates received #4
-2023/12/11 11:36:26 : image received #4
-2023/12/11 11:36:26 : image coordinates received
-2023/12/11 11:36:26 : coordinates received #5
-2023/12/11 11:36:26 : image received #5
-2023/12/11 11:36:27 : image coordinates received
-2023/12/11 11:36:27 : coordinates received #6
-2023/12/11 11:36:27 : image received #6
-2023/12/11 11:36:27 : image coordinates received
-2023/12/11 11:36:27 : coordinates received #7
-2023/12/11 11:36:28 : image received #7
-2023/12/11 11:36:28 : image coordinates received
-2023/12/11 11:36:28 : coordinates received #8
-2023/12/11 11:36:28 : image received #8
-2023/12/11 11:36:29 : image coordinates received
-2023/12/11 11:36:29 : coordinates received #9
-2023/12/11 11:36:29 : image received #9
-2023/12/11 11:36:29 : image coordinates received
-2023/12/11 11:36:29 : coordinates received #10
-2023/12/11 11:36:30 : image received #10
-2023/12/11 11:36:30 : image coordinates received
-2023/12/11 11:36:30 : coordinates received #11
-2023/12/11 11:36:30 : image received #11
-2023/12/11 11:36:30 : image coordinates received
-2023/12/11 11:36:31 : coordinates received #12
-2023/12/11 11:36:31 : image received #12
-2023/12/11 11:36:31 : image coordinates received
-2023/12/11 11:36:31 : coordinates received #13
-2023/12/11 11:36:31 : image received #13
-2023/12/11 11:36:32 : image coordinates received
-2023/12/11 11:36:32 : coordinates received #14
-2023/12/11 11:36:32 : image received #14
-2023/12/11 11:36:32 : image coordinates received
-2023/12/11 11:36:32 : coordinates received #15
-2023/12/11 11:36:33 : image received #15
-2023/12/11 11:36:33 : path request received
-2023/12/11 11:36:33 : path response sent
-2023/12/11 11:38:05 : ===== startup
-2023/12/11 11:38:05 : connect to the camera
-2023/12/11 11:38:05 : connect MQTT
-2023/12/11 11:38:05 : start the engine
-2023/12/11 11:38:05 : camera connected
-2023/12/11 11:38:05 : MQTT broker connected
-2023/12/11 11:38:17 : profiles received 
-2023/12/11 11:39:32 : ===== startup
-2023/12/11 11:39:32 : connect to the camera
-2023/12/11 11:39:32 : connect MQTT
-2023/12/11 11:39:32 : start the engine
-2023/12/11 11:39:32 : camera connected
-2023/12/11 11:39:32 : MQTT broker connected
-2023/12/11 11:40:43 : profiles received 
-2023/12/11 11:40:43 : ==== new cycle 7
-2023/12/11 11:40:43 : image coordinates received
-2023/12/11 11:40:43 : coordinates received #1
-2023/12/11 11:40:44 : image received #1
-2023/12/11 11:40:44 : image coordinates received
-2023/12/11 11:40:44 : coordinates received #2
-2023/12/11 11:40:44 : image received #2
-2023/12/11 11:40:45 : image coordinates received
-2023/12/11 11:40:45 : coordinates received #3
-2023/12/11 11:40:45 : image received #3
-2023/12/11 11:40:45 : image coordinates received
-2023/12/11 11:40:45 : coordinates received #4
-2023/12/11 11:40:45 : image received #4
-2023/12/11 11:40:46 : image coordinates received
-2023/12/11 11:40:46 : coordinates received #5
-2023/12/11 11:40:46 : image received #5
-2023/12/11 11:40:46 : image coordinates received
-2023/12/11 11:40:46 : coordinates received #6
-2023/12/11 11:40:47 : image received #6
-2023/12/11 11:40:47 : image coordinates received
-2023/12/11 11:40:47 : coordinates received #7
-2023/12/11 11:40:47 : image received #7
-2023/12/11 11:40:48 : image coordinates received
-2023/12/11 11:40:48 : coordinates received #8
-2023/12/11 11:40:48 : image received #8
-2023/12/11 11:40:48 : image coordinates received
-2023/12/11 11:40:48 : coordinates received #9
-2023/12/11 11:40:49 : image received #9
-2023/12/11 11:40:49 : image coordinates received
-2023/12/11 11:40:49 : coordinates received #10
-2023/12/11 11:40:49 : image received #10
-2023/12/11 11:40:49 : image coordinates received
-2023/12/11 11:40:49 : coordinates received #11
-2023/12/11 11:40:50 : image received #11
-2023/12/11 11:40:50 : image coordinates received
-2023/12/11 11:40:50 : coordinates received #12
-2023/12/11 11:40:50 : image received #12
-2023/12/11 11:40:51 : image coordinates received
-2023/12/11 11:40:51 : coordinates received #13
-2023/12/11 11:40:51 : image received #13
-2023/12/11 11:40:51 : image coordinates received
-2023/12/11 11:40:51 : coordinates received #14
-2023/12/11 11:40:52 : image received #14
-2023/12/11 11:40:52 : image coordinates received
-2023/12/11 11:40:52 : coordinates received #15
-2023/12/11 11:40:52 : image received #15
-2023/12/11 11:40:53 : path request received
-2023/12/11 11:40:53 : path response sent
-2023/12/11 11:43:06 : profiles received 
-2023/12/11 11:43:06 : ==== new cycle 2
-2023/12/11 11:43:06 : image coordinates received
-2023/12/11 11:43:06 : coordinates received #1
-2023/12/11 11:43:06 : image received #1
-2023/12/11 11:43:06 : image coordinates received
-2023/12/11 11:43:06 : coordinates received #2
-2023/12/11 11:43:07 : image received #2
-2023/12/11 11:43:07 : image coordinates received
-2023/12/11 11:43:07 : coordinates received #3
-2023/12/11 11:43:07 : image received #3
-2023/12/11 11:43:08 : image coordinates received
-2023/12/11 11:43:08 : coordinates received #4
-2023/12/11 11:43:08 : image received #4
-2023/12/11 11:43:08 : image coordinates received
-2023/12/11 11:43:08 : coordinates received #5
-2023/12/11 11:43:09 : image received #5
-2023/12/11 11:43:09 : image coordinates received
-2023/12/11 11:43:09 : coordinates received #6
-2023/12/11 11:43:09 : image received #6
-2023/12/11 11:43:10 : image coordinates received
-2023/12/11 11:43:10 : coordinates received #7
-2023/12/11 11:43:10 : image received #7
-2023/12/11 11:43:10 : image coordinates received
-2023/12/11 11:43:10 : coordinates received #8
-2023/12/11 11:43:10 : image received #8
-2023/12/11 11:43:11 : image coordinates received
-2023/12/11 11:43:11 : coordinates received #9
-2023/12/11 11:43:11 : image received #9
-2023/12/11 11:43:11 : image coordinates received
-2023/12/11 11:43:11 : coordinates received #10
-2023/12/11 11:43:12 : image received #10
-2023/12/11 11:43:12 : image coordinates received
-2023/12/11 11:43:12 : coordinates received #11
-2023/12/11 11:43:12 : image received #11
-2023/12/11 11:43:13 : image coordinates received
-2023/12/11 11:43:13 : coordinates received #12
-2023/12/11 11:43:13 : image received #12
-2023/12/11 11:43:13 : image coordinates received
-2023/12/11 11:43:13 : coordinates received #13
-2023/12/11 11:43:13 : image received #13
-2023/12/11 11:43:14 : image coordinates received
-2023/12/11 11:43:14 : coordinates received #14
-2023/12/11 11:43:14 : image received #14
-2023/12/11 11:43:14 : image coordinates received
-2023/12/11 11:43:14 : coordinates received #15
-2023/12/11 11:43:15 : image received #15
-2023/12/11 11:43:15 : path request received
-2023/12/11 11:43:16 : path response sent
-2023/12/11 11:44:40 : profiles received 
-2023/12/11 11:44:40 : image coordinates received
-2023/12/11 11:44:40 : coordinates received #16
-2023/12/11 11:44:41 : image received #16
-2023/12/11 11:44:41 : image coordinates received
-2023/12/11 11:44:41 : coordinates received #17
-2023/12/11 11:44:41 : image received #17
-2023/12/11 11:44:42 : image coordinates received
-2023/12/11 11:44:42 : coordinates received #18
-2023/12/11 11:44:42 : image received #18
-2023/12/11 11:44:42 : image coordinates received
-2023/12/11 11:44:42 : coordinates received #19
-2023/12/11 11:44:43 : image received #19
-2023/12/11 11:44:43 : image coordinates received
-2023/12/11 11:44:43 : coordinates received #20
-2023/12/11 11:44:43 : image received #20
-2023/12/11 11:44:43 : image coordinates received
-2023/12/11 11:44:43 : coordinates received #21
-2023/12/11 11:44:44 : image received #21
-2023/12/11 11:44:44 : image coordinates received
-2023/12/11 11:44:44 : coordinates received #22
-2023/12/11 11:44:44 : image received #22
-2023/12/11 11:44:45 : image coordinates received
-2023/12/11 11:44:45 : coordinates received #23
-2023/12/11 11:44:45 : image received #23
-2023/12/11 11:44:45 : image coordinates received
-2023/12/11 11:44:45 : coordinates received #24
-2023/12/11 11:44:46 : image received #24
-2023/12/11 11:44:46 : image coordinates received
-2023/12/11 11:44:46 : coordinates received #25
-2023/12/11 11:44:46 : image received #25
-2023/12/11 11:44:47 : image coordinates received
-2023/12/11 11:44:47 : coordinates received #26
-2023/12/11 11:44:47 : image received #26
-2023/12/11 11:44:47 : image coordinates received
-2023/12/11 11:44:47 : coordinates received #27
-2023/12/11 11:44:47 : image received #27
-2023/12/11 11:44:48 : image coordinates received
-2023/12/11 11:44:48 : coordinates received #28
-2023/12/11 11:44:48 : image received #28
-2023/12/11 11:44:48 : image coordinates received
-2023/12/11 11:44:48 : coordinates received #29
-2023/12/11 11:44:49 : image received #29
-2023/12/11 11:44:49 : image coordinates received
-2023/12/11 11:44:49 : coordinates received #30
-2023/12/11 11:44:49 : image received #30
-2023/12/11 11:44:50 : path request received
-2023/12/11 11:44:50 : path error sent [invalid number of coordinates: 30]
-2023/12/11 11:46:44 : ===== startup
-2023/12/11 11:46:44 : connect to the camera
-2023/12/11 11:46:44 : connect MQTT
-2023/12/11 11:46:44 : start the engine
-2023/12/11 11:46:44 : camera connected
-2023/12/11 11:46:44 : MQTT broker connected
-2023/12/11 11:47:58 : profiles received 
-2023/12/11 11:47:58 : ==== new cycle 3
-2023/12/11 11:47:58 : image coordinates received
-2023/12/11 11:47:58 : coordinates received #1
-2023/12/11 11:47:58 : image received #1
-2023/12/11 11:47:58 : image coordinates received
-2023/12/11 11:47:58 : coordinates received #2
-2023/12/11 11:47:58 : image received #2
-2023/12/11 11:47:59 : image coordinates received
-2023/12/11 11:47:59 : coordinates received #3
-2023/12/11 11:47:59 : image received #3
-2023/12/11 11:47:59 : image coordinates received
-2023/12/11 11:47:59 : coordinates received #4
-2023/12/11 11:48:00 : image received #4
-2023/12/11 11:48:00 : image coordinates received
-2023/12/11 11:48:00 : coordinates received #5
-2023/12/11 11:48:00 : image received #5
-2023/12/11 11:48:01 : image coordinates received
-2023/12/11 11:48:01 : coordinates received #6
-2023/12/11 11:48:01 : image received #6
-2023/12/11 11:48:01 : image coordinates received
-2023/12/11 11:48:01 : coordinates received #7
-2023/12/11 11:48:02 : image received #7
-2023/12/11 11:48:02 : image coordinates received
-2023/12/11 11:48:02 : coordinates received #8
-2023/12/11 11:48:02 : image received #8
-2023/12/11 11:48:03 : image coordinates received
-2023/12/11 11:48:03 : coordinates received #9
-2023/12/11 11:48:03 : image received #9
-2023/12/11 11:48:03 : image coordinates received
-2023/12/11 11:48:03 : coordinates received #10
-2023/12/11 11:48:03 : image received #10
-2023/12/11 11:48:04 : image coordinates received
-2023/12/11 11:48:04 : coordinates received #11
-2023/12/11 11:48:04 : image received #11
-2023/12/11 11:48:04 : image coordinates received
-2023/12/11 11:48:04 : coordinates received #12
-2023/12/11 11:48:05 : image received #12
-2023/12/11 11:48:05 : image coordinates received
-2023/12/11 11:48:05 : coordinates received #13
-2023/12/11 11:48:05 : image received #13
-2023/12/11 11:48:06 : image coordinates received
-2023/12/11 11:48:06 : coordinates received #14
-2023/12/11 11:48:06 : image received #14
-2023/12/11 11:48:06 : image coordinates received
-2023/12/11 11:48:06 : coordinates received #15
-2023/12/11 11:48:06 : image received #15
-2023/12/11 11:48:07 : path request received
-2023/12/11 11:48:07 : path response sent
-2023/12/11 11:48:42 : profiles received 
-2023/12/11 11:48:42 : ==== new cycle 5
-2023/12/11 11:48:42 : image coordinates received
-2023/12/11 11:48:42 : coordinates received #1
-2023/12/11 11:48:42 : image received #1
-2023/12/11 11:48:42 : image coordinates received
-2023/12/11 11:48:42 : coordinates received #2
-2023/12/11 11:48:42 : image received #2
-2023/12/11 11:48:43 : image coordinates received
-2023/12/11 11:48:43 : coordinates received #3
-2023/12/11 11:48:43 : image received #3
-2023/12/11 11:48:43 : image coordinates received
-2023/12/11 11:48:43 : coordinates received #4
-2023/12/11 11:48:44 : image received #4
-2023/12/11 11:48:44 : image coordinates received
-2023/12/11 11:48:44 : coordinates received #5
-2023/12/11 11:48:44 : image received #5
-2023/12/11 11:48:45 : image coordinates received
-2023/12/11 11:48:45 : coordinates received #6
-2023/12/11 11:48:45 : image received #6
-2023/12/11 11:48:45 : image coordinates received
-2023/12/11 11:48:45 : coordinates received #7
-2023/12/11 11:48:46 : image received #7
-2023/12/11 11:48:46 : image coordinates received
-2023/12/11 11:48:46 : coordinates received #8
-2023/12/11 11:48:46 : image received #8
-2023/12/11 11:48:46 : image coordinates received
-2023/12/11 11:48:46 : coordinates received #9
-2023/12/11 11:48:47 : image received #9
-2023/12/11 11:48:47 : image coordinates received
-2023/12/11 11:48:47 : coordinates received #10
-2023/12/11 11:48:47 : image received #10
-2023/12/11 11:48:48 : image coordinates received
-2023/12/11 11:48:48 : coordinates received #11
-2023/12/11 11:48:48 : image received #11
-2023/12/11 11:48:48 : image coordinates received
-2023/12/11 11:48:48 : coordinates received #12
-2023/12/11 11:48:49 : image received #12
-2023/12/11 11:48:49 : image coordinates received
-2023/12/11 11:48:49 : coordinates received #13
-2023/12/11 11:48:49 : image received #13
-2023/12/11 11:48:50 : image coordinates received
-2023/12/11 11:48:50 : coordinates received #14
-2023/12/11 11:48:50 : image received #14
-2023/12/11 11:48:50 : image coordinates received
-2023/12/11 11:48:50 : coordinates received #15
-2023/12/11 11:48:50 : image received #15
-2023/12/11 11:48:51 : path request received
-2023/12/11 11:48:51 : path response sent
+2023/12/12 11:46:22:528747 : profiles received 
+2023/12/12 11:46:22:534758 : ==== new cycle 3
+2023/12/12 11:46:22:557144 : image coordinates received
+2023/12/12 11:46:22:561954 : coordinates received #1
+2023/12/12 11:46:22:985147 : image received #1
+2023/12/12 11:46:23:149122 : image coordinates received
+2023/12/12 11:46:23:162568 : coordinates received #2
+2023/12/12 11:46:23:460942 : image received #2
+2023/12/12 11:46:23:772116 : image coordinates received
+2023/12/12 11:46:23:785535 : coordinates received #3
+2023/12/12 11:46:24:068411 : image received #3
+2023/12/12 11:46:24:396261 : image coordinates received
+2023/12/12 11:46:24:410464 : coordinates received #4
+2023/12/12 11:46:24:677332 : image received #4
+2023/12/12 11:46:25:005527 : image coordinates received
+2023/12/12 11:46:25:019153 : coordinates received #5
+2023/12/12 11:46:25:301855 : image received #5
+2023/12/12 11:46:25:629307 : image coordinates received
+2023/12/12 11:46:25:639547 : coordinates received #6
+2023/12/12 11:46:25:908963 : image received #6
+2023/12/12 11:46:26:234931 : image coordinates received
+2023/12/12 11:46:26:245922 : coordinates received #7
+2023/12/12 11:46:26:532793 : image received #7
+2023/12/12 11:46:26:862927 : image coordinates received
+2023/12/12 11:46:26:875936 : coordinates received #8
+2023/12/12 11:46:27:145014 : image received #8
+2023/12/12 11:46:27:475617 : image coordinates received
+2023/12/12 11:46:27:484583 : coordinates received #9
+2023/12/12 11:46:27:772097 : image received #9
+2023/12/12 11:46:28:084058 : image coordinates received
+2023/12/12 11:46:28:092799 : coordinates received #10
+2023/12/12 11:46:28:378869 : image received #10
+2023/12/12 11:46:28:707743 : image coordinates received
+2023/12/12 11:46:28:716714 : coordinates received #11
+2023/12/12 11:46:29:003968 : image received #11
+2023/12/12 11:46:29:316121 : image coordinates received
+2023/12/12 11:46:29:327517 : coordinates received #12
+2023/12/12 11:46:29:613815 : image received #12
+2023/12/12 11:46:29:938556 : image coordinates received
+2023/12/12 11:46:29:949031 : coordinates received #13
+2023/12/12 11:46:30:234277 : image received #13
+2023/12/12 11:46:30:559165 : image coordinates received
+2023/12/12 11:46:30:571092 : coordinates received #14
+2023/12/12 11:46:30:854324 : image received #14
+2023/12/12 11:46:31:167130 : image coordinates received
+2023/12/12 11:46:31:178597 : coordinates received #15
+2023/12/12 11:46:31:462228 : image received #15
+2023/12/12 11:46:32:224401 : path request received
+2023/12/12 11:46:32:233261 : path response sent
+2023/12/12 11:47:07:469895 : profiles received 
+2023/12/12 11:47:07:489538 : ==== new cycle 4
+2023/12/12 11:47:07:509249 : image coordinates received
+2023/12/12 11:47:07:520713 : coordinates received #1
+2023/12/12 11:47:07:743638 : image received #1
+2023/12/12 11:47:08:068682 : image coordinates received
+2023/12/12 11:47:08:077499 : coordinates received #2
+2023/12/12 11:47:08:364495 : image received #2
+2023/12/12 11:47:08:691454 : image coordinates received
+2023/12/12 11:47:08:700230 : coordinates received #3
+2023/12/12 11:47:08:987333 : image received #3
+2023/12/12 11:47:09:315147 : image coordinates received
+2023/12/12 11:47:09:323117 : coordinates received #4
+2023/12/12 11:47:09:597691 : image received #4
+2023/12/12 11:47:09:924759 : image coordinates received
+2023/12/12 11:47:09:934711 : coordinates received #5
+2023/12/12 11:47:10:219867 : image received #5
+2023/12/12 11:47:10:547394 : image coordinates received
+2023/12/12 11:47:10:553904 : coordinates received #6
+2023/12/12 11:47:10:828478 : image received #6
+2023/12/12 11:47:11:155424 : image coordinates received
+2023/12/12 11:47:11:165387 : coordinates received #7
+2023/12/12 11:47:11:451110 : image received #7
+2023/12/12 11:47:11:778109 : image coordinates received
+2023/12/12 11:47:11:789084 : coordinates received #8
+2023/12/12 11:47:12:073454 : image received #8
+2023/12/12 11:47:12:386849 : image coordinates received
+2023/12/12 11:47:12:393695 : coordinates received #9
+2023/12/12 11:47:12:683216 : image received #9
+2023/12/12 11:47:13:010718 : image coordinates received
+2023/12/12 11:47:13:018707 : coordinates received #10
+2023/12/12 11:47:13:306786 : image received #10
+2023/12/12 11:47:13:618008 : image coordinates received
+2023/12/12 11:47:13:627599 : coordinates received #11
+2023/12/12 11:47:13:913666 : image received #11
+2023/12/12 11:47:14:243668 : image coordinates received
+2023/12/12 11:47:14:252449 : coordinates received #12
+2023/12/12 11:47:14:526671 : image received #12
+2023/12/12 11:47:14:852709 : image coordinates received
+2023/12/12 11:47:14:864131 : coordinates received #13
+2023/12/12 11:47:15:150080 : image received #13
+2023/12/12 11:47:15:478988 : image coordinates received
+2023/12/12 11:47:15:493382 : coordinates received #14
+2023/12/12 11:47:15:774537 : image received #14
+2023/12/12 11:47:16:086962 : image coordinates received
+2023/12/12 11:47:16:091870 : coordinates received #15
+2023/12/12 11:47:16:382756 : image received #15
+2023/12/12 11:47:17:146504 : path request received
+2023/12/12 11:47:17:163127 : path response sent
+2023/12/12 11:54:07:819137 : profiles received 
+2023/12/12 11:54:07:842712 : ==== new cycle 7
+2023/12/12 11:54:07:858488 : image coordinates received
+2023/12/12 11:54:07:864382 : coordinates received #1
+2023/12/12 11:54:08:108652 : image received #1
+2023/12/12 11:54:08:434557 : image coordinates received
+2023/12/12 11:54:08:443343 : coordinates received #2
+2023/12/12 11:54:08:714864 : image received #2
+2023/12/12 11:54:09:041856 : image coordinates received
+2023/12/12 11:54:09:050626 : coordinates received #3
+2023/12/12 11:54:09:339540 : image received #3
+2023/12/12 11:57:48:366221 : profiles received 
+2023/12/12 11:57:48:391953 : ==== new cycle 10
+2023/12/12 11:57:48:401721 : image coordinates received
+2023/12/12 11:57:48:407467 : coordinates received #1
+2023/12/12 11:57:48:636446 : image received #1
+2023/12/12 11:57:48:978185 : image coordinates received
+2023/12/12 11:57:48:988132 : coordinates received #2
+2023/12/12 11:57:49:245222 : image received #2
+2023/12/12 11:57:49:585999 : image coordinates received
+2023/12/12 11:57:49:595995 : coordinates received #3
+2023/12/12 11:57:49:866237 : image received #3
+2023/12/12 11:57:50:210764 : image coordinates received
+2023/12/12 11:57:50:219676 : coordinates received #4
+2023/12/12 11:57:50:476873 : image received #4
+2023/12/12 11:57:50:821274 : image coordinates received
+2023/12/12 11:57:50:830062 : coordinates received #5
+2023/12/12 11:57:51:100884 : image received #5
+2023/12/12 11:57:51:446412 : image coordinates received
+2023/12/12 11:57:51:460334 : coordinates received #6
+2023/12/12 11:57:51:713490 : image received #6
+2023/12/12 11:57:52:058346 : image coordinates received
+2023/12/12 11:57:52:066859 : coordinates received #7
+2023/12/12 11:57:52:324369 : image received #7
+2023/12/12 11:57:52:669547 : image coordinates received
+2023/12/12 11:57:52:680532 : coordinates received #8
+2023/12/12 11:57:52:949780 : image received #8
+2023/12/12 11:57:53:291704 : image coordinates received
+2023/12/12 11:57:53:306106 : coordinates received #9
+2023/12/12 11:57:53:556412 : image received #9
+2023/12/12 11:57:53:914020 : image coordinates received
+2023/12/12 11:57:53:928379 : coordinates received #10
+2023/12/12 11:57:54:179167 : image received #10
+2023/12/12 11:57:54:524636 : image coordinates received
+2023/12/12 11:57:54:532582 : coordinates received #11
+2023/12/12 11:57:54:791013 : image received #11
+2023/12/12 11:57:55:133056 : image coordinates received
+2023/12/12 11:57:55:144999 : coordinates received #12
+2023/12/12 11:57:55:412696 : image received #12
+2023/12/12 11:57:55:756220 : image coordinates received
+2023/12/12 11:57:55:768174 : coordinates received #13
+2023/12/12 11:57:56:022103 : image received #13
+2023/12/12 11:57:56:365197 : image coordinates received
+2023/12/12 11:57:56:381120 : coordinates received #14
+2023/12/12 11:57:56:646714 : image received #14
+2023/12/12 11:57:56:985639 : image coordinates received
+2023/12/12 11:57:56:995694 : coordinates received #15
+2023/12/12 11:57:57:252274 : image received #15
+2023/12/12 11:57:58:050271 : path request received
+2023/12/12 11:57:58:056098 : path response sent
+2023/12/12 12:08:36:929843 : ===== startup
+2023/12/12 12:08:36:930945 : connect to the camera
+2023/12/12 12:08:36:936869 : connect MQTT
+2023/12/12 12:16:51:596174 : ===== startup
+2023/12/12 12:16:51:601757 : connect to the camera
+2023/12/12 12:16:51:607763 : connect MQTT
+2023/12/12 12:17:13:956752 : ===== startup
+2023/12/12 12:17:13:963271 : connect to the camera
+2023/12/12 12:17:13:968311 : connect MQTT
+2023/12/12 12:19:22:053563 : ===== startup
+2023/12/12 12:19:22:058562 : connect to the camera
+2023/12/12 12:19:22:064165 : connect MQTT
+2023/12/12 12:19:22:070174 : start the engine
+2023/12/12 12:22:40:027621 : ===== startup
+2023/12/12 12:22:40:033199 : connect to the camera
+2023/12/12 12:22:40:039131 : connect MQTT
+2023/12/12 12:22:40:044132 : start the engine
+2023/12/12 12:24:31:809385 : ===== startup
+2023/12/12 12:24:31:815925 : connect to the camera
+2023/12/12 12:24:31:821941 : connect MQTT
+2023/12/12 12:24:31:826901 : start the engine
+2023/12/12 12:26:03:127099 : ===== startup
+2023/12/12 12:26:03:134056 : connect to the camera
+2023/12/12 12:26:03:139090 : connect MQTT
+2023/12/12 12:26:03:143663 : start the engine
+2023/12/12 12:26:03:202731 : camera connected
+2023/12/12 12:26:25:187549 : ===== startup
+2023/12/12 12:26:25:192585 : connect to the camera
+2023/12/12 12:26:25:199546 : connect MQTT
+2023/12/12 12:26:25:204711 : start the engine
+2023/12/12 12:26:25:236409 : camera connected
+2023/12/12 12:26:48:506691 : ===== startup
+2023/12/12 12:26:48:512299 : connect to the camera
+2023/12/12 12:26:48:517302 : connect MQTT
+2023/12/12 12:26:48:523839 : start the engine
+2023/12/12 12:26:48:556551 : camera connected
+2023/12/12 12:27:12:217983 : ===== startup
+2023/12/12 12:27:12:223545 : connect to the camera
+2023/12/12 12:27:12:230521 : connect MQTT
+2023/12/12 12:27:12:236500 : start the engine
+2023/12/12 12:27:12:298891 : camera connected
+2023/12/12 12:27:12:350134 : MQTT broker connected
+2023/12/12 12:27:23:378915 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:27:26:453327 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:27:36:460754 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:27:46:472032 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:27:53:504657 : camera connected
+2023/12/12 12:27:53:516579 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:28:03:531143 : camera connected
+2023/12/12 12:28:03:540139 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:28:13:527413 : camera connected
+2023/12/12 12:28:13:537451 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:28:23:536293 : camera connected
+2023/12/12 12:28:23:548317 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:28:33:544007 : camera connected
+2023/12/12 12:28:33:554041 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:28:43:543716 : camera connected
+2023/12/12 12:28:43:555372 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:28:53:573120 : camera connected
+2023/12/12 12:28:53:582121 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:29:03:567871 : camera connected
+2023/12/12 12:29:03:581481 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:29:13:568546 : camera connected
+2023/12/12 12:29:13:579569 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:29:23:579843 : camera connected
+2023/12/12 12:29:23:588838 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:29:33:583405 : camera connected
+2023/12/12 12:29:33:593392 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:29:43:599720 : camera connected
+2023/12/12 12:29:43:609377 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:29:53:600982 : camera connected
+2023/12/12 12:29:53:610031 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:30:03:600226 : camera connected
+2023/12/12 12:30:03:609254 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:30:13:611056 : camera connected
+2023/12/12 12:30:13:620068 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:30:23:638576 : camera connected
+2023/12/12 12:30:23:648559 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:30:33:630216 : camera connected
+2023/12/12 12:30:33:640238 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:30:43:642024 : camera connected
+2023/12/12 12:30:43:650971 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:30:53:650484 : camera connected
+2023/12/12 12:30:53:657504 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:31:03:664027 : camera connected
+2023/12/12 12:31:03:671027 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:31:13:684539 : camera connected
+2023/12/12 12:31:13:695488 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:31:23:690080 : camera connected
+2023/12/12 12:31:23:697072 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:31:33:669123 : camera connected
+2023/12/12 12:31:33:675154 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:31:43:674204 : camera connected
+2023/12/12 12:31:43:681219 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:31:53:704583 : camera connected
+2023/12/12 12:31:53:717219 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:32:03:697141 : camera connected
+2023/12/12 12:32:03:705148 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:32:13:713689 : camera connected
+2023/12/12 12:32:13:724685 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:32:23:715279 : camera connected
+2023/12/12 12:32:23:725313 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:32:33:720484 : camera connected
+2023/12/12 12:32:33:731532 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:32:43:725044 : camera connected
+2023/12/12 12:32:43:737066 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:32:56:709201 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:33:03:741321 : camera connected
+2023/12/12 12:33:03:750316 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:33:13:743910 : camera connected
+2023/12/12 12:33:13:756447 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:33:23:751542 : camera connected
+2023/12/12 12:33:23:764167 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:33:36:737012 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:33:46:737200 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:33:56:738929 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:34:06:747344 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:34:13:778697 : camera connected
+2023/12/12 12:34:13:789713 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:34:34:704429 : ===== startup
+2023/12/12 12:34:34:710486 : connect to the camera
+2023/12/12 12:34:34:715480 : connect MQTT
+2023/12/12 12:34:34:721073 : start the engine
+2023/12/12 12:34:34:765841 : camera connected
+2023/12/12 12:34:34:787478 : MQTT broker connected
+2023/12/12 12:34:54:794464 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:34:57:844570 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/12 12:35:04:864706 : camera connected
+2023/12/12 12:35:04:871613 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/12 12:35:12:896444 : ===== startup
+2023/12/12 12:35:12:902536 : connect to the camera
+2023/12/12 12:35:12:908427 : connect MQTT
+2023/12/12 12:35:12:914077 : start the engine
+2023/12/12 12:35:12:947238 : camera connected
+2023/12/12 12:35:12:962836 : MQTT broker connected
+2023/12/12 12:37:13:532198 : ===== startup
+2023/12/12 12:37:13:538187 : connect to the camera
+2023/12/12 12:37:13:543227 : connect MQTT
+2023/12/12 12:37:13:549739 : start the engine
+2023/12/12 12:37:13:610087 : camera connected
+2023/12/12 12:37:13:661302 : MQTT broker connected
+2023/12/12 12:38:58:293557 : profiles received 
+2023/12/12 12:38:58:318146 : ==== new cycle 2
+2023/12/12 12:38:58:337393 : image coordinates received
+2023/12/12 12:38:58:351357 : coordinates received #1
+2023/12/12 12:38:58:734246 : image received #1
+2023/12/12 12:38:58:915287 : image coordinates received
+2023/12/12 12:38:58:932255 : coordinates received #2
+2023/12/12 12:38:59:197795 : image received #2
+2023/12/12 12:38:59:538275 : image coordinates received
+2023/12/12 12:38:59:554375 : coordinates received #3
+2023/12/12 12:38:59:804938 : image received #3
+2023/12/12 12:39:00:148748 : image coordinates received
+2023/12/12 12:39:00:164156 : coordinates received #4
+2023/12/12 12:39:00:430205 : image received #4
+2023/12/12 12:39:00:775000 : image coordinates received
+2023/12/12 12:39:00:785943 : coordinates received #5
+2023/12/12 12:39:01:053608 : image received #5
+2023/12/12 12:39:01:383968 : image coordinates received
+2023/12/12 12:39:01:400437 : coordinates received #6
+2023/12/12 12:39:01:665456 : image received #6
+2023/12/12 12:39:01:994876 : image coordinates received
+2023/12/12 12:39:02:012134 : coordinates received #7
+2023/12/12 12:39:02:274136 : image received #7
+2023/12/12 12:39:02:616011 : image coordinates received
+2023/12/12 12:39:02:626249 : coordinates received #8
+2023/12/12 12:39:02:898215 : image received #8
+2023/12/12 12:39:03:240754 : image coordinates received
+2023/12/12 12:39:03:249642 : coordinates received #9
+2023/12/12 12:39:03:506261 : image received #9
+2023/12/12 12:39:03:849718 : image coordinates received
+2023/12/12 12:39:03:858424 : coordinates received #10
+2023/12/12 12:39:04:131676 : image received #10
+2023/12/12 12:39:04:471849 : image coordinates received
+2023/12/12 12:39:04:483349 : coordinates received #11
+2023/12/12 12:39:04:736276 : image received #11
+2023/12/12 12:39:05:079278 : image coordinates received
+2023/12/12 12:39:05:094741 : coordinates received #12
+2023/12/12 12:39:05:359619 : image received #12
+2023/12/12 12:39:05:701080 : image coordinates received
+2023/12/12 12:39:05:709562 : coordinates received #13
+2023/12/12 12:39:05:980938 : image received #13
+2023/12/12 12:39:06:322747 : image coordinates received
+2023/12/12 12:39:06:334737 : coordinates received #14
+2023/12/12 12:39:06:588762 : image received #14
+2023/12/12 12:39:06:933665 : image coordinates received
+2023/12/12 12:39:06:946055 : coordinates received #15
+2023/12/12 12:39:07:214798 : image received #15
+2023/12/12 12:39:07:996530 : path request received
+2023/12/12 12:43:30:840761 : ===== startup
+2023/12/12 12:43:30:848734 : connect to the camera
+2023/12/12 12:43:30:854734 : connect MQTT
+2023/12/12 12:43:30:860286 : start the engine
+2023/12/12 12:43:30:894039 : camera connected
+2023/12/12 12:43:30:938703 : MQTT broker connected
+2023/12/12 12:46:08:979103 : ===== startup
+2023/12/12 12:46:08:985144 : connect to the camera
+2023/12/12 12:46:08:990710 : connect MQTT
+2023/12/12 12:46:08:996750 : start the engine
+2023/12/12 12:46:09:067525 : camera connected
+2023/12/12 12:46:09:117469 : MQTT broker connected
+2023/12/12 12:46:23:023179 : ===== startup
+2023/12/12 12:46:23:029216 : connect to the camera
+2023/12/12 12:46:23:034767 : connect MQTT
+2023/12/12 12:46:23:040783 : start the engine
+2023/12/12 12:46:23:096325 : camera connected
+2023/12/12 12:46:23:145759 : MQTT broker connected
+2023/12/12 12:46:47:412071 : ===== startup
+2023/12/12 12:46:47:418074 : connect to the camera
+2023/12/12 12:46:47:424128 : connect MQTT
+2023/12/12 12:46:47:430075 : start the engine
+2023/12/12 12:46:47:486752 : camera connected
+2023/12/12 12:46:47:540829 : MQTT broker connected
+2023/12/12 12:48:32:355671 : profiles received 
+2023/12/12 12:48:32:375223 : ==== new cycle 4
+2023/12/12 12:48:32:395137 : image coordinates received
+2023/12/12 12:48:32:402926 : coordinates received #1
+2023/12/12 12:48:32:792223 : image received #1
+2023/12/12 12:48:32:974696 : image coordinates received
+2023/12/12 12:48:32:985000 : coordinates received #2
+2023/12/12 12:48:33:253834 : image received #2
+2023/12/12 12:48:33:582470 : image coordinates received
+2023/12/12 12:48:33:592442 : coordinates received #3
+2023/12/12 12:48:33:863363 : image received #3
+2023/12/12 12:48:34:208864 : image coordinates received
+2023/12/12 12:48:34:221458 : coordinates received #4
+2023/12/12 12:48:34:488514 : image received #4
+2023/12/12 12:48:34:830944 : image coordinates received
+2023/12/12 12:48:34:843361 : coordinates received #5
+2023/12/12 12:48:35:095268 : image received #5
+2023/12/12 12:48:35:437099 : image coordinates received
+2023/12/12 12:48:35:445841 : coordinates received #6
+2023/12/12 12:48:35:718537 : image received #6
+2023/12/12 12:48:36:058961 : image coordinates received
+2023/12/12 12:48:36:075511 : coordinates received #7
+2023/12/12 12:48:36:340318 : image received #7
+2023/12/12 12:48:36:669497 : image coordinates received
+2023/12/12 12:48:36:681047 : coordinates received #8
+2023/12/12 12:48:36:952479 : image received #8
+2023/12/12 12:48:37:298102 : image coordinates received
+2023/12/12 12:48:37:313459 : coordinates received #9
+2023/12/12 12:48:37:562909 : image received #9
+2023/12/12 12:48:37:906656 : image coordinates received
+2023/12/12 12:48:37:915621 : coordinates received #10
+2023/12/12 12:48:38:187880 : image received #10
+2023/12/12 12:48:38:527002 : image coordinates received
+2023/12/12 12:48:38:535845 : coordinates received #11
+2023/12/12 12:48:38:805755 : image received #11
+2023/12/12 12:48:39:134857 : image coordinates received
+2023/12/12 12:48:39:144860 : coordinates received #12
+2023/12/12 12:48:39:415908 : image received #12
+2023/12/12 12:48:39:758724 : image coordinates received
+2023/12/12 12:48:39:774239 : coordinates received #13
+2023/12/12 12:48:40:039196 : image received #13
+2023/12/12 12:48:40:380976 : image coordinates received
+2023/12/12 12:48:40:389770 : coordinates received #14
+2023/12/12 12:48:40:645841 : image received #14
+2023/12/12 12:48:40:989609 : image coordinates received
+2023/12/12 12:48:40:997321 : coordinates received #15
+2023/12/12 12:48:41:270637 : image received #15
+2023/12/12 12:48:42:050933 : path request received
+2023/12/12 12:48:42:062530 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 12:49:24:886579 : ===== startup
+2023/12/12 12:49:24:891612 : connect to the camera
+2023/12/12 12:49:24:898187 : connect MQTT
+2023/12/12 12:49:24:903744 : start the engine
+2023/12/12 12:49:24:938138 : camera connected
+2023/12/12 12:49:24:959491 : MQTT broker connected
+2023/12/12 12:55:29:033519 : profiles received 
+2023/12/12 12:55:29:046517 : ==== new cycle 5
+2023/12/12 12:55:29:061095 : image coordinates received
+2023/12/12 12:55:29:068044 : coordinates received #1
+2023/12/12 12:55:29:470223 : image received #1
+2023/12/12 12:55:29:640694 : image coordinates received
+2023/12/12 12:55:29:649337 : coordinates received #2
+2023/12/12 12:55:29:921119 : image received #2
+2023/12/12 12:55:30:266979 : image coordinates received
+2023/12/12 12:55:30:274871 : coordinates received #3
+2023/12/12 12:55:30:544667 : image received #3
+2023/12/12 12:55:30:889066 : image coordinates received
+2023/12/12 12:55:30:900066 : coordinates received #4
+2023/12/12 12:55:31:156408 : image received #4
+2023/12/12 12:55:31:500107 : image coordinates received
+2023/12/12 12:55:31:510322 : coordinates received #5
+2023/12/12 12:55:31:781924 : image received #5
+2023/12/12 12:55:32:110558 : image coordinates received
+2023/12/12 12:55:32:121134 : coordinates received #6
+2023/12/12 12:55:32:391306 : image received #6
+2023/12/12 12:55:32:737215 : image coordinates received
+2023/12/12 12:55:32:747691 : coordinates received #7
+2023/12/12 12:55:33:002444 : image received #7
+2023/12/12 12:55:33:346062 : image coordinates received
+2023/12/12 12:55:33:352579 : coordinates received #8
+2023/12/12 12:55:33:628325 : image received #8
+2023/12/12 12:55:33:959092 : image coordinates received
+2023/12/12 12:55:33:966947 : coordinates received #9
+2023/12/12 12:55:34:241082 : image received #9
+2023/12/12 12:55:34:582732 : image coordinates received
+2023/12/12 12:55:34:594603 : coordinates received #10
+2023/12/12 12:55:34:863276 : image received #10
+2023/12/12 12:55:35:191611 : image coordinates received
+2023/12/12 12:55:35:204131 : coordinates received #11
+2023/12/12 12:55:35:470699 : image received #11
+2023/12/12 12:55:35:812282 : image coordinates received
+2023/12/12 12:55:35:821190 : coordinates received #12
+2023/12/12 12:55:36:094848 : image received #12
+2023/12/12 12:55:36:438347 : image coordinates received
+2023/12/12 12:55:36:456282 : coordinates received #13
+2023/12/12 12:55:36:704041 : image received #13
+2023/12/12 12:55:37:045546 : image coordinates received
+2023/12/12 12:55:37:054413 : coordinates received #14
+2023/12/12 12:55:37:327489 : image received #14
+2023/12/12 12:55:37:668572 : image coordinates received
+2023/12/12 12:55:37:680532 : coordinates received #15
+2023/12/12 12:55:37:933709 : image received #15
+2023/12/12 12:55:38:730303 : path request received
+2023/12/12 12:55:38:746738 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 12:56:22:072397 : ===== startup
+2023/12/12 12:56:22:078454 : connect to the camera
+2023/12/12 12:56:22:084444 : connect MQTT
+2023/12/12 12:56:22:090398 : start the engine
+2023/12/12 12:56:22:126346 : camera connected
+2023/12/12 12:56:22:175665 : MQTT broker connected
+2023/12/12 12:56:53:812265 : profiles received 
+2023/12/12 12:56:53:829322 : ==== new cycle 6
+2023/12/12 12:56:53:871543 : image coordinates received
+2023/12/12 12:56:53:879546 : coordinates received #1
+2023/12/12 12:56:54:248457 : image received #1
+2023/12/12 12:56:54:431650 : image coordinates received
+2023/12/12 12:56:54:444058 : coordinates received #2
+2023/12/12 12:56:54:713218 : image received #2
+2023/12/12 12:56:55:057915 : image coordinates received
+2023/12/12 12:56:55:070408 : coordinates received #3
+2023/12/12 12:56:55:338601 : image received #3
+2023/12/12 12:56:55:665814 : image coordinates received
+2023/12/12 12:56:55:678800 : coordinates received #4
+2023/12/12 12:56:55:948866 : image received #4
+2023/12/12 12:56:56:292820 : image coordinates received
+2023/12/12 12:56:56:297644 : coordinates received #5
+2023/12/12 12:56:56:573583 : image received #5
+2023/12/12 12:56:56:903384 : image coordinates received
+2023/12/12 12:56:56:910917 : coordinates received #6
+2023/12/12 12:56:57:186434 : image received #6
+2023/12/12 12:56:57:529930 : image coordinates received
+2023/12/12 12:56:57:539849 : coordinates received #7
+2023/12/12 12:56:57:810364 : image received #7
+2023/12/12 12:56:58:137294 : image coordinates received
+2023/12/12 12:56:58:146131 : coordinates received #8
+2023/12/12 12:56:58:417848 : image received #8
+2023/12/12 12:56:58:761915 : image coordinates received
+2023/12/12 12:56:58:770846 : coordinates received #9
+2023/12/12 12:56:59:029548 : image received #9
+2023/12/12 12:56:59:371599 : image coordinates received
+2023/12/12 12:56:59:380365 : coordinates received #10
+2023/12/12 12:56:59:652351 : image received #10
+2023/12/12 12:56:59:995859 : image coordinates received
+2023/12/12 12:57:00:013848 : coordinates received #11
+2023/12/12 12:57:00:262196 : image received #11
+2023/12/12 12:57:00:605654 : image coordinates received
+2023/12/12 12:57:00:614443 : coordinates received #12
+2023/12/12 12:57:00:884599 : image received #12
+2023/12/12 12:57:01:226430 : image coordinates received
+2023/12/12 12:57:01:236473 : coordinates received #13
+2023/12/12 12:57:01:493438 : image received #13
+2023/12/12 12:57:01:838344 : image coordinates received
+2023/12/12 12:57:01:847078 : coordinates received #14
+2023/12/12 12:57:02:117423 : image received #14
+2023/12/12 12:57:02:461919 : image coordinates received
+2023/12/12 12:57:02:470706 : coordinates received #15
+2023/12/12 12:57:02:742670 : image received #15
+2023/12/12 12:57:03:523135 : path request received
+2023/12/12 12:57:03:533154 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 12:57:45:397626 : ===== startup
+2023/12/12 12:57:45:402673 : connect to the camera
+2023/12/12 12:57:45:409197 : connect MQTT
+2023/12/12 12:57:45:415205 : start the engine
+2023/12/12 12:57:45:470283 : camera connected
+2023/12/12 12:57:45:488788 : MQTT broker connected
+2023/12/12 12:58:06:753429 : profiles received 
+2023/12/12 12:58:06:764941 : ==== new cycle 7
+2023/12/12 12:58:06:780341 : image coordinates received
+2023/12/12 12:58:06:787136 : coordinates received #1
+2023/12/12 12:58:07:206588 : image received #1
+2023/12/12 12:58:07:374267 : image coordinates received
+2023/12/12 12:58:07:387191 : coordinates received #2
+2023/12/12 12:58:07:655083 : image received #2
+2023/12/12 12:58:07:997607 : image coordinates received
+2023/12/12 12:58:08:010137 : coordinates received #3
+2023/12/12 12:58:08:263111 : image received #3
+2023/12/12 12:58:08:606427 : image coordinates received
+2023/12/12 12:58:08:614424 : coordinates received #4
+2023/12/12 12:58:08:889484 : image received #4
+2023/12/12 12:58:09:234623 : image coordinates received
+2023/12/12 12:58:09:244602 : coordinates received #5
+2023/12/12 12:58:09:501671 : image received #5
+2023/12/12 12:58:09:846040 : image coordinates received
+2023/12/12 12:58:09:852200 : coordinates received #6
+2023/12/12 12:58:10:127616 : image received #6
+2023/12/12 12:58:10:455684 : image coordinates received
+2023/12/12 12:58:10:468280 : coordinates received #7
+2023/12/12 12:58:10:738295 : image received #7
+2023/12/12 12:58:11:082870 : image coordinates received
+2023/12/12 12:58:11:091587 : coordinates received #8
+2023/12/12 12:58:11:361587 : image received #8
+2023/12/12 12:58:11:688343 : image coordinates received
+2023/12/12 12:58:11:697270 : coordinates received #9
+2023/12/12 12:58:11:969828 : image received #9
+2023/12/12 12:58:12:312049 : image coordinates received
+2023/12/12 12:58:12:319977 : coordinates received #10
+2023/12/12 12:58:12:592836 : image received #10
+2023/12/12 12:58:12:923105 : image coordinates received
+2023/12/12 12:58:12:933040 : coordinates received #11
+2023/12/12 12:58:13:204441 : image received #11
+2023/12/12 12:58:13:546171 : image coordinates received
+2023/12/12 12:58:13:557749 : coordinates received #12
+2023/12/12 12:58:13:811321 : image received #12
+2023/12/12 12:58:14:152195 : image coordinates received
+2023/12/12 12:58:14:162704 : coordinates received #13
+2023/12/12 12:58:14:434406 : image received #13
+2023/12/12 12:58:14:776305 : image coordinates received
+2023/12/12 12:58:14:785225 : coordinates received #14
+2023/12/12 12:58:15:057996 : image received #14
+2023/12/12 12:58:15:400298 : image coordinates received
+2023/12/12 12:58:15:410512 : coordinates received #15
+2023/12/12 12:58:15:679463 : image received #15
+2023/12/12 12:58:16:444296 : path request received
+2023/12/12 12:58:16:450175 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 12:59:33:014680 : profiles received 
+2023/12/12 12:59:33:038733 : ==== new cycle 2
+2023/12/12 12:59:33:056449 : image coordinates received
+2023/12/12 12:59:33:062493 : coordinates received #1
+2023/12/12 12:59:33:276570 : image received #1
+2023/12/12 12:59:33:618217 : image coordinates received
+2023/12/12 12:59:33:628255 : coordinates received #2
+2023/12/12 12:59:33:899456 : image received #2
+2023/12/12 12:59:34:242685 : image coordinates received
+2023/12/12 12:59:34:259874 : coordinates received #3
+2023/12/12 12:59:34:524335 : image received #3
+2023/12/12 12:59:34:853294 : image coordinates received
+2023/12/12 12:59:34:861886 : coordinates received #4
+2023/12/12 12:59:35:132528 : image received #4
+2023/12/12 12:59:35:474917 : image coordinates received
+2023/12/12 12:59:35:486866 : coordinates received #5
+2023/12/12 12:59:35:755482 : image received #5
+2023/12/12 12:59:36:097438 : image coordinates received
+2023/12/12 12:59:36:110321 : coordinates received #6
+2023/12/12 12:59:36:363904 : image received #6
+2023/12/12 12:59:36:707476 : image coordinates received
+2023/12/12 12:59:36:717422 : coordinates received #7
+2023/12/12 12:59:36:987844 : image received #7
+2023/12/12 12:59:37:316960 : image coordinates received
+2023/12/12 12:59:37:327344 : coordinates received #8
+2023/12/12 12:59:37:596596 : image received #8
+2023/12/12 12:59:37:937948 : image coordinates received
+2023/12/12 12:59:37:947897 : coordinates received #9
+2023/12/12 12:59:38:221387 : image received #9
+2023/12/12 12:59:38:548525 : image coordinates received
+2023/12/12 12:59:38:557450 : coordinates received #10
+2023/12/12 12:59:38:828409 : image received #10
+2023/12/12 12:59:39:171562 : image coordinates received
+2023/12/12 12:59:39:184534 : coordinates received #11
+2023/12/12 12:59:39:454320 : image received #11
+2023/12/12 12:59:39:781289 : image coordinates received
+2023/12/12 12:59:39:791833 : coordinates received #12
+2023/12/12 12:59:40:061464 : image received #12
+2023/12/12 12:59:40:407081 : image coordinates received
+2023/12/12 12:59:40:415793 : coordinates received #13
+2023/12/12 12:59:40:689402 : image received #13
+2023/12/12 12:59:41:029885 : image coordinates received
+2023/12/12 12:59:41:041829 : coordinates received #14
+2023/12/12 12:59:41:295205 : image received #14
+2023/12/12 12:59:41:638617 : image coordinates received
+2023/12/12 12:59:41:654148 : coordinates received #15
+2023/12/12 12:59:41:920407 : image received #15
+2023/12/12 12:59:42:698801 : path request received
+2023/12/12 12:59:42:707444 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 13:01:20:872881 : profiles received 
+2023/12/12 13:01:20:895643 : ==== new cycle 2
+2023/12/12 13:01:20:911486 : image coordinates received
+2023/12/12 13:01:20:917328 : coordinates received #1
+2023/12/12 13:01:21:132244 : image received #1
+2023/12/12 13:01:21:475341 : image coordinates received
+2023/12/12 13:01:21:485268 : coordinates received #2
+2023/12/12 13:01:21:756994 : image received #2
+2023/12/12 13:01:22:097569 : image coordinates received
+2023/12/12 13:01:22:116054 : coordinates received #3
+2023/12/12 13:01:22:375905 : image received #3
+2023/12/12 13:01:22:720574 : image coordinates received
+2023/12/12 13:01:22:733142 : coordinates received #4
+2023/12/12 13:01:22:987151 : image received #4
+2023/12/12 13:01:23:328106 : image coordinates received
+2023/12/12 13:01:23:341207 : coordinates received #5
+2023/12/12 13:01:23:609150 : image received #5
+2023/12/12 13:01:23:950299 : image coordinates received
+2023/12/12 13:01:23:962658 : coordinates received #6
+2023/12/12 13:01:24:232339 : image received #6
+2023/12/12 13:01:24:558270 : image coordinates received
+2023/12/12 13:01:24:567192 : coordinates received #7
+2023/12/12 13:01:24:838487 : image received #7
+2023/12/12 13:01:25:183769 : image coordinates received
+2023/12/12 13:01:25:190810 : coordinates received #8
+2023/12/12 13:01:25:463070 : image received #8
+2023/12/12 13:01:25:805456 : image coordinates received
+2023/12/12 13:01:25:814082 : coordinates received #9
+2023/12/12 13:01:26:070819 : image received #9
+2023/12/12 13:01:26:414504 : image coordinates received
+2023/12/12 13:01:26:424481 : coordinates received #10
+2023/12/12 13:01:26:694269 : image received #10
+2023/12/12 13:01:27:037449 : image coordinates received
+2023/12/12 13:01:27:049903 : coordinates received #11
+2023/12/12 13:01:27:303329 : image received #11
+2023/12/12 13:01:27:645918 : image coordinates received
+2023/12/12 13:01:27:658633 : coordinates received #12
+2023/12/12 13:01:27:926887 : image received #12
+2023/12/12 13:01:28:271398 : image coordinates received
+2023/12/12 13:01:28:287422 : coordinates received #13
+2023/12/12 13:01:28:535225 : image received #13
+2023/12/12 13:01:28:877593 : image coordinates received
+2023/12/12 13:01:28:887517 : coordinates received #14
+2023/12/12 13:01:29:157402 : image received #14
+2023/12/12 13:01:29:501319 : image coordinates received
+2023/12/12 13:01:29:510051 : coordinates received #15
+2023/12/12 13:01:29:781181 : image received #15
+2023/12/12 13:01:30:560279 : path request received
+2023/12/12 13:01:30:572312 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 13:04:14:434350 : profiles received 
+2023/12/12 13:04:14:453447 : ==== new cycle 2
+2023/12/12 13:04:14:462573 : image coordinates received
+2023/12/12 13:04:14:469444 : coordinates received #1
+2023/12/12 13:04:14:711192 : image received #1
+2023/12/12 13:04:15:056020 : image coordinates received
+2023/12/12 13:04:15:064977 : coordinates received #2
+2023/12/12 13:04:15:321190 : image received #2
+2023/12/12 13:04:15:665362 : image coordinates received
+2023/12/12 13:04:15:677761 : coordinates received #3
+2023/12/12 13:04:15:945347 : image received #3
+2023/12/12 13:04:16:289214 : image coordinates received
+2023/12/12 13:04:16:295007 : coordinates received #4
+2023/12/12 13:04:16:555572 : image received #4
+2023/12/12 13:04:16:900336 : image coordinates received
+2023/12/12 13:04:16:912705 : coordinates received #5
+2023/12/12 13:04:17:179676 : image received #5
+2023/12/12 13:04:17:522540 : image coordinates received
+2023/12/12 13:04:17:535913 : coordinates received #6
+2023/12/12 13:04:17:802571 : image received #6
+2023/12/12 13:04:18:147410 : image coordinates received
+2023/12/12 13:04:18:157870 : coordinates received #7
+2023/12/12 13:04:18:413393 : image received #7
+2023/12/12 13:04:18:753115 : image coordinates received
+2023/12/12 13:04:18:761951 : coordinates received #8
+2023/12/12 13:04:19:033442 : image received #8
+2023/12/12 13:04:19:376391 : image coordinates received
+2023/12/12 13:04:19:387333 : coordinates received #9
+2023/12/12 13:04:19:642369 : image received #9
+2023/12/12 13:04:19:985181 : image coordinates received
+2023/12/12 13:04:19:995425 : coordinates received #10
+2023/12/12 13:04:20:266487 : image received #10
+2023/12/12 13:04:20:607866 : image coordinates received
+2023/12/12 13:04:20:621148 : coordinates received #11
+2023/12/12 13:04:20:875652 : image received #11
+2023/12/12 13:04:21:221299 : image coordinates received
+2023/12/12 13:04:21:238123 : coordinates received #12
+2023/12/12 13:04:21:500220 : image received #12
+2023/12/12 13:04:21:844023 : image coordinates received
+2023/12/12 13:04:21:856353 : coordinates received #13
+2023/12/12 13:04:22:108180 : image received #13
+2023/12/12 13:04:22:451817 : image coordinates received
+2023/12/12 13:04:22:462122 : coordinates received #14
+2023/12/12 13:04:22:732153 : image received #14
+2023/12/12 13:04:23:076719 : image coordinates received
+2023/12/12 13:04:23:085478 : coordinates received #15
+2023/12/12 13:04:23:341162 : image received #15
+2023/12/12 13:04:24:137391 : path request received
+2023/12/12 13:04:24:147336 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 13:06:14:686388 : profiles received 
+2023/12/12 13:06:14:698389 : ==== new cycle 2
+2023/12/12 13:06:14:716036 : image coordinates received
+2023/12/12 13:06:14:731598 : coordinates received #1
+2023/12/12 13:06:14:965421 : image received #1
+2023/12/12 13:06:15:310931 : image coordinates received
+2023/12/12 13:06:15:320502 : coordinates received #2
+2023/12/12 13:06:15:586206 : image received #2
+2023/12/12 13:06:15:930353 : image coordinates received
+2023/12/12 13:06:15:947864 : coordinates received #3
+2023/12/12 13:06:16:211372 : image received #3
+2023/12/12 13:06:16:556624 : image coordinates received
+2023/12/12 13:06:16:570578 : coordinates received #4
+2023/12/12 13:06:16:821876 : image received #4
+2023/12/12 13:06:17:162233 : image coordinates received
+2023/12/12 13:06:17:180615 : coordinates received #5
+2023/12/12 13:06:17:445081 : image received #5
+2023/12/12 13:06:17:788476 : image coordinates received
+2023/12/12 13:06:17:798933 : coordinates received #6
+2023/12/12 13:06:18:053481 : image received #6
+2023/12/12 13:06:18:395127 : image coordinates received
+2023/12/12 13:06:18:402100 : coordinates received #7
+2023/12/12 13:06:18:675759 : image received #7
+2023/12/12 13:06:19:017761 : image coordinates received
+2023/12/12 13:06:19:035319 : coordinates received #8
+2023/12/12 13:06:19:298146 : image received #8
+2023/12/12 13:06:19:639376 : image coordinates received
+2023/12/12 13:06:19:652336 : coordinates received #9
+2023/12/12 13:06:19:904563 : image received #9
+2023/12/12 13:06:20:248183 : image coordinates received
+2023/12/12 13:06:20:257056 : coordinates received #10
+2023/12/12 13:06:20:528727 : image received #10
+2023/12/12 13:06:20:871988 : image coordinates received
+2023/12/12 13:06:20:881946 : coordinates received #11
+2023/12/12 13:06:21:137907 : image received #11
+2023/12/12 13:06:21:481785 : image coordinates received
+2023/12/12 13:06:21:494295 : coordinates received #12
+2023/12/12 13:06:21:763209 : image received #12
+2023/12/12 13:06:22:104289 : image coordinates received
+2023/12/12 13:06:22:114892 : coordinates received #13
+2023/12/12 13:06:22:370405 : image received #13
+2023/12/12 13:06:22:726891 : image coordinates received
+2023/12/12 13:06:22:736808 : coordinates received #14
+2023/12/12 13:06:22:993969 : image received #14
+2023/12/12 13:06:23:337398 : image coordinates received
+2023/12/12 13:06:23:347650 : coordinates received #15
+2023/12/12 13:06:23:617516 : image received #15
+2023/12/12 13:06:24:396017 : path request received
+2023/12/12 13:06:24:407384 : path error sent [Hi Carlos, time for lunch]
+2023/12/12 13:40:49:465350 : profiles received 
+2023/12/12 13:40:49:485395 : ==== new cycle 1
+2023/12/12 13:40:49:494133 : image coordinates received
+2023/12/12 13:40:49:499951 : coordinates received #1
+2023/12/12 13:40:50:087826 : image coordinates received
+2023/12/12 13:40:50:096796 : coordinates received #2
+2023/12/12 13:40:50:696023 : image coordinates received
+2023/12/12 13:40:50:713379 : coordinates received #3
+2023/12/12 13:40:51:320748 : image coordinates received
+2023/12/12 13:40:51:330714 : coordinates received #4
+2023/12/12 13:40:51:929704 : image coordinates received
+2023/12/12 13:40:51:942072 : coordinates received #5
+2023/12/12 13:40:52:553973 : image coordinates received
+2023/12/12 13:40:52:559553 : coordinates received #6
+2023/12/12 13:40:53:177819 : image coordinates received
+2023/12/12 13:40:53:190719 : coordinates received #7
+2023/12/12 13:40:53:789730 : image coordinates received
+2023/12/12 13:40:53:800153 : coordinates received #8
+2023/12/12 13:40:54:396982 : image coordinates received
+2023/12/12 13:40:54:405799 : coordinates received #9
+2023/12/12 13:40:55:019857 : image coordinates received
+2023/12/12 13:40:55:028731 : coordinates received #10
+2023/12/12 13:40:55:643014 : image coordinates received
+2023/12/12 13:40:55:655305 : coordinates received #11
+2023/12/12 13:40:56:248894 : image coordinates received
+2023/12/12 13:40:56:259207 : coordinates received #12
+2023/12/12 13:40:56:871070 : image coordinates received
+2023/12/12 13:40:56:882052 : coordinates received #13
+2023/12/12 13:40:57:495895 : image coordinates received
+2023/12/12 13:40:57:504659 : coordinates received #14
+2023/12/12 13:40:58:100015 : image coordinates received
+2023/12/12 13:40:58:108555 : coordinates received #15
+2023/12/12 13:40:59:159725 : path request received
+2023/12/12 13:40:59:168582 : path error sent [invalid number of images: 0]
+2023/12/12 13:47:24:519126 : profiles received 
+2023/12/12 13:47:24:544051 : ==== new cycle 4
+2023/12/12 13:47:24:559952 : image coordinates received
+2023/12/12 13:47:24:567834 : coordinates received #1
+2023/12/12 13:47:25:122935 : image coordinates received
+2023/12/12 13:47:25:134905 : coordinates received #2
+2023/12/12 13:47:25:745811 : image coordinates received
+2023/12/12 13:47:25:756049 : coordinates received #3
+2023/12/12 13:47:26:366548 : image coordinates received
+2023/12/12 13:47:26:383601 : coordinates received #4
+2023/12/12 13:47:26:976273 : image coordinates received
+2023/12/12 13:47:26:985138 : coordinates received #5
+2023/12/12 13:47:27:599547 : image coordinates received
+2023/12/12 13:47:27:609901 : coordinates received #6
+2023/12/12 13:47:28:222665 : image coordinates received
+2023/12/12 13:47:28:230726 : coordinates received #7
+2023/12/12 13:47:28:831410 : image coordinates received
+2023/12/12 13:47:28:843807 : coordinates received #8
+2023/12/12 13:47:29:454761 : image coordinates received
+2023/12/12 13:47:29:471735 : coordinates received #9
+2023/12/12 13:47:30:066620 : image coordinates received
+2023/12/12 13:47:30:084974 : coordinates received #10
+2023/12/12 13:47:30:685038 : image coordinates received
+2023/12/12 13:47:30:703953 : coordinates received #11
+2023/12/12 13:47:31:293329 : image coordinates received
+2023/12/12 13:47:31:303607 : coordinates received #12
+2023/12/12 13:47:31:916562 : image coordinates received
+2023/12/12 13:47:31:925606 : coordinates received #13
+2023/12/12 13:47:32:526375 : image coordinates received
+2023/12/12 13:47:32:534257 : coordinates received #14
+2023/12/12 13:47:33:147880 : image coordinates received
+2023/12/12 13:47:33:155720 : coordinates received #15
+2023/12/12 13:47:34:209489 : path request received
+2023/12/12 13:47:34:227062 : path error sent [invalid number of images: 0]
+2023/12/12 13:53:43:882058 : profiles received 
+2023/12/12 13:53:43:898067 : ==== new cycle 2
+2023/12/12 13:53:43:909660 : image coordinates received
+2023/12/12 13:53:43:918619 : coordinates received #1
+2023/12/12 13:53:44:504505 : image coordinates received
+2023/12/12 13:53:44:511026 : coordinates received #2
+2023/12/12 13:53:45:117238 : image coordinates received
+2023/12/12 13:53:45:124873 : coordinates received #3
+2023/12/12 13:53:45:742964 : image coordinates received
+2023/12/12 13:53:45:755851 : coordinates received #4
+2023/12/12 13:53:46:355673 : image coordinates received
+2023/12/12 13:53:46:361655 : coordinates received #5
+2023/12/12 13:53:46:968079 : image coordinates received
+2023/12/12 13:53:46:980089 : coordinates received #6
+2023/12/12 13:53:47:580827 : image coordinates received
+2023/12/12 13:53:47:586776 : coordinates received #7
+2023/12/12 13:53:48:209330 : image coordinates received
+2023/12/12 13:53:48:216245 : coordinates received #8
+2023/12/12 13:53:48:823411 : image coordinates received
+2023/12/12 13:53:48:833388 : coordinates received #9
+2023/12/12 13:53:49:436837 : image coordinates received
+2023/12/12 13:53:49:445715 : coordinates received #10
+2023/12/12 13:53:50:048047 : image coordinates received
+2023/12/12 13:53:50:062509 : coordinates received #11
+2023/12/12 13:53:50:659334 : image coordinates received
+2023/12/12 13:53:50:669337 : coordinates received #12
+2023/12/12 13:53:51:287922 : image coordinates received
+2023/12/12 13:53:51:304004 : coordinates received #13
+2023/12/12 13:53:51:901263 : image coordinates received
+2023/12/12 13:53:51:909860 : coordinates received #14
+2023/12/12 13:53:52:529778 : image coordinates received
+2023/12/12 13:53:52:537693 : coordinates received #15
+2023/12/12 13:53:53:582197 : path request received
+2023/12/12 13:53:53:590198 : path error sent [invalid number of images: 0]
+2023/12/12 13:55:07:804722 : profiles received 
+2023/12/12 13:55:07:830413 : ==== new cycle 3
+2023/12/12 13:55:07:859099 : image coordinates received
+2023/12/12 13:55:07:867856 : coordinates received #1
+2023/12/12 13:55:08:357954 : image coordinates received
+2023/12/12 13:55:08:366949 : coordinates received #2
+2023/12/12 13:55:08:978692 : image coordinates received
+2023/12/12 13:55:08:987572 : coordinates received #3
+2023/12/12 13:55:09:585904 : image coordinates received
+2023/12/12 13:55:09:594859 : coordinates received #4
+2023/12/12 13:55:10:209260 : image coordinates received
+2023/12/12 13:55:10:216031 : coordinates received #5
+2023/12/12 13:55:10:830748 : image coordinates received
+2023/12/12 13:55:10:837687 : coordinates received #6
+2023/12/12 13:55:11:441254 : image coordinates received
+2023/12/12 13:55:11:458491 : coordinates received #7
+2023/12/12 13:55:12:050066 : image coordinates received
+2023/12/12 13:55:12:066660 : coordinates received #8
+2023/12/12 13:55:12:673249 : image coordinates received
+2023/12/12 13:55:12:680184 : coordinates received #9
+2023/12/12 13:55:13:298651 : image coordinates received
+2023/12/12 13:55:13:307433 : coordinates received #10
+2023/12/12 13:55:13:905228 : image coordinates received
+2023/12/12 13:55:13:914297 : coordinates received #11
+2023/12/12 13:55:14:528637 : image coordinates received
+2023/12/12 13:55:14:538805 : coordinates received #12
+2023/12/12 13:55:15:135790 : image coordinates received
+2023/12/12 13:55:15:145741 : coordinates received #13
+2023/12/12 13:55:15:759401 : image coordinates received
+2023/12/12 13:55:15:769004 : coordinates received #14
+2023/12/12 13:55:16:384370 : image coordinates received
+2023/12/12 13:55:16:391278 : coordinates received #15
+2023/12/12 13:55:17:429107 : path request received
+2023/12/12 13:55:17:434973 : path error sent [invalid number of images: 0]
+2023/12/12 13:57:36:882226 : profiles received 
+2023/12/12 13:57:36:909537 : ==== new cycle 2
+2023/12/12 13:57:36:925079 : image coordinates received
+2023/12/12 13:57:36:931078 : coordinates received #1
+2023/12/12 13:57:37:502232 : image coordinates received
+2023/12/12 13:57:37:518571 : coordinates received #2
+2023/12/12 13:57:38:122940 : image coordinates received
+2023/12/12 13:57:38:133937 : coordinates received #3
+2023/12/12 13:57:38:731393 : image coordinates received
+2023/12/12 13:57:38:740238 : coordinates received #4
+2023/12/12 13:57:39:355072 : image coordinates received
+2023/12/12 13:57:39:364689 : coordinates received #5
+2023/12/12 13:57:39:977834 : image coordinates received
+2023/12/12 13:57:39:994743 : coordinates received #6
+2023/12/12 13:57:40:586898 : image coordinates received
+2023/12/12 13:57:40:598431 : coordinates received #7
+2023/12/12 13:57:41:211718 : image coordinates received
+2023/12/12 13:57:41:225687 : coordinates received #8
+2023/12/12 13:57:41:818356 : image coordinates received
+2023/12/12 13:57:41:827302 : coordinates received #9
+2023/12/12 13:57:42:438575 : image coordinates received
+2023/12/12 13:57:42:449505 : coordinates received #10
+2023/12/12 13:57:43:058853 : image coordinates received
+2023/12/12 13:57:43:068437 : coordinates received #11
+2023/12/12 13:57:43:667332 : image coordinates received
+2023/12/12 13:57:43:677248 : coordinates received #12
+2023/12/12 13:57:44:289857 : image coordinates received
+2023/12/12 13:57:44:298803 : coordinates received #13
+2023/12/12 13:57:44:911190 : image coordinates received
+2023/12/12 13:57:44:923672 : coordinates received #14
+2023/12/12 13:57:45:553257 : image coordinates received
+2023/12/12 13:57:45:563841 : coordinates received #15
+2023/12/12 13:57:46:580484 : path request received
+2023/12/12 13:57:46:593442 : path error sent [invalid number of images: 0]
+2023/12/12 14:00:11:367056 : profiles received 
+2023/12/12 14:00:11:395654 : ==== new cycle 2
+2023/12/12 14:00:11:411268 : image coordinates received
+2023/12/12 14:00:11:417850 : coordinates received #1
+2023/12/12 14:00:11:983622 : image coordinates received
+2023/12/12 14:00:11:992556 : coordinates received #2
+2023/12/12 14:00:12:606360 : image coordinates received
+2023/12/12 14:00:12:617862 : coordinates received #3
+2023/12/12 14:00:13:214890 : image coordinates received
+2023/12/12 14:00:13:227860 : coordinates received #4
+2023/12/12 14:00:13:838665 : image coordinates received
+2023/12/12 14:00:13:847499 : coordinates received #5
+2023/12/12 14:00:14:462848 : image coordinates received
+2023/12/12 14:00:14:471727 : coordinates received #6
+2023/12/12 14:00:15:072931 : image coordinates received
+2023/12/12 14:00:15:089205 : coordinates received #7
+2023/12/12 14:00:15:680391 : image coordinates received
+2023/12/12 14:00:15:689418 : coordinates received #8
+2023/12/12 14:00:16:303082 : image coordinates received
+2023/12/12 14:00:16:318898 : coordinates received #9
+2023/12/12 14:00:16:929096 : image coordinates received
+2023/12/12 14:00:16:946411 : coordinates received #10
+2023/12/12 14:00:17:538273 : image coordinates received
+2023/12/12 14:00:17:547223 : coordinates received #11
+2023/12/12 14:00:18:146010 : image coordinates received
+2023/12/12 14:00:18:157717 : coordinates received #12
+2023/12/12 14:00:18:767307 : image coordinates received
+2023/12/12 14:00:18:778248 : coordinates received #13
+2023/12/12 14:00:19:393932 : image coordinates received
+2023/12/12 14:00:19:402777 : coordinates received #14
+2023/12/12 14:00:20:000701 : image coordinates received
+2023/12/12 14:00:20:009308 : coordinates received #15
+2023/12/12 14:00:21:060856 : path request received
+2023/12/12 14:00:21:069795 : path error sent [invalid number of images: 0]
+2023/12/12 14:04:19:610665 : profiles received 
+2023/12/12 14:04:19:636278 : ==== new cycle 4
+2023/12/12 14:04:19:649558 : image coordinates received
+2023/12/12 14:04:19:655371 : coordinates received #1
+2023/12/12 14:04:20:210220 : image coordinates received
+2023/12/12 14:04:20:222154 : coordinates received #2
+2023/12/12 14:04:20:837901 : image coordinates received
+2023/12/12 14:04:20:856865 : coordinates received #3
+2023/12/12 14:04:21:444845 : image coordinates received
+2023/12/12 14:04:21:453423 : coordinates received #4
+2023/12/12 14:04:22:071499 : image coordinates received
+2023/12/12 14:04:22:081466 : coordinates received #5
+2023/12/12 14:04:22:677955 : image coordinates received
+2023/12/12 14:04:22:688297 : coordinates received #6
+2023/12/12 14:04:23:304030 : image coordinates received
+2023/12/12 14:04:23:314516 : coordinates received #7
+2023/12/12 14:04:23:910644 : image coordinates received
+2023/12/12 14:04:23:919515 : coordinates received #8
+2023/12/12 14:04:24:535171 : image coordinates received
+2023/12/12 14:04:24:543123 : coordinates received #9
+2023/12/12 14:04:25:146251 : image coordinates received
+2023/12/12 14:04:25:156642 : coordinates received #10
+2023/12/12 14:04:25:769866 : image coordinates received
+2023/12/12 14:04:25:778570 : coordinates received #11
+2023/12/12 14:04:26:380355 : image coordinates received
+2023/12/12 14:04:26:389142 : coordinates received #12
+2023/12/12 14:04:27:002154 : image coordinates received
+2023/12/12 14:04:27:013526 : coordinates received #13
+2023/12/12 14:04:27:612559 : image coordinates received
+2023/12/12 14:04:27:627596 : coordinates received #14
+2023/12/12 14:04:28:237091 : image coordinates received
+2023/12/12 14:04:28:242999 : coordinates received #15
+2023/12/12 14:04:29:281679 : path request received
+2023/12/12 14:04:29:287680 : path error sent [invalid number of images: 0]
+2023/12/12 14:04:47:433613 : ===== startup
+2023/12/12 14:04:47:439584 : connect to the camera
+2023/12/12 14:04:47:444248 : connect MQTT
+2023/12/12 14:04:47:451241 : start the engine
+2023/12/12 14:04:47:533276 : camera connected
+2023/12/12 14:04:47:556092 : MQTT broker connected
+2023/12/12 14:05:07:848841 : profiles received 
+2023/12/12 14:05:07:863449 : ==== new cycle 5
+2023/12/12 14:05:07:876049 : image coordinates received
+2023/12/12 14:05:07:885060 : coordinates received #1
+2023/12/12 14:05:08:287494 : image received #1
+2023/12/12 14:05:08:469231 : image coordinates received
+2023/12/12 14:05:08:481272 : coordinates received #2
+2023/12/12 14:05:08:751152 : image received #2
+2023/12/12 14:05:09:079131 : image coordinates received
+2023/12/12 14:05:09:086177 : coordinates received #3
+2023/12/12 14:05:09:358326 : image received #3
+2023/12/12 14:05:09:701742 : image coordinates received
+2023/12/12 14:05:09:714173 : coordinates received #4
+2023/12/12 14:05:09:985637 : image received #4
+2023/12/12 14:05:10:330981 : image coordinates received
+2023/12/12 14:05:10:347510 : coordinates received #5
+2023/12/12 14:05:10:592972 : image received #5
+2023/12/12 14:05:10:936471 : image coordinates received
+2023/12/12 14:05:10:945952 : coordinates received #6
+2023/12/12 14:05:11:217324 : image received #6
+2023/12/12 14:05:11:559493 : image coordinates received
+2023/12/12 14:05:11:572083 : coordinates received #7
+2023/12/12 14:05:11:825233 : image received #7
+2023/12/12 14:05:12:169950 : image coordinates received
+2023/12/12 14:05:12:181904 : coordinates received #8
+2023/12/12 14:05:12:451687 : image received #8
+2023/12/12 14:05:12:779315 : image coordinates received
+2023/12/12 14:05:12:791755 : coordinates received #9
+2023/12/12 14:05:13:058742 : image received #9
+2023/12/12 14:05:13:401875 : image coordinates received
+2023/12/12 14:05:13:408350 : coordinates received #10
+2023/12/12 14:05:13:683073 : image received #10
+2023/12/12 14:05:14:026977 : image coordinates received
+2023/12/12 14:05:14:036927 : coordinates received #11
+2023/12/12 14:05:14:292964 : image received #11
+2023/12/12 14:05:14:632814 : image coordinates received
+2023/12/12 14:05:14:649712 : coordinates received #12
+2023/12/12 14:05:14:914283 : image received #12
+2023/12/12 14:05:15:257858 : image coordinates received
+2023/12/12 14:05:15:274776 : coordinates received #13
+2023/12/12 14:05:15:522949 : image received #13
+2023/12/12 14:05:15:866202 : image coordinates received
+2023/12/12 14:05:15:874159 : coordinates received #14
+2023/12/12 14:05:16:147980 : image received #14
+2023/12/12 14:05:16:492908 : image coordinates received
+2023/12/12 14:05:16:510484 : coordinates received #15
+2023/12/12 14:05:16:756977 : image received #15
+2023/12/12 14:05:17:551874 : path request received
+2023/12/12 14:05:17:563202 : path response sent
+2023/12/12 14:06:06:413503 : profiles received 
+2023/12/12 14:06:06:439111 : ==== new cycle 6
+2023/12/12 14:06:06:457640 : image coordinates received
+2023/12/12 14:06:06:568096 : coordinates received #1
+2023/12/12 14:06:06:676045 : image received #1
+2023/12/12 14:06:07:020157 : image coordinates received
+2023/12/12 14:06:07:033503 : coordinates received #2
+2023/12/12 14:06:07:299374 : image received #2
+2023/12/12 14:06:07:640924 : image coordinates received
+2023/12/12 14:06:07:651388 : coordinates received #3
+2023/12/12 14:06:07:922804 : image received #3
+2023/12/12 14:06:08:265630 : image coordinates received
+2023/12/12 14:06:08:281676 : coordinates received #4
+2023/12/12 14:06:08:532373 : image received #4
+2023/12/12 14:06:08:873907 : image coordinates received
+2023/12/12 14:06:08:882872 : coordinates received #5
+2023/12/12 14:06:09:156301 : image received #5
+2023/12/12 14:06:09:499297 : image coordinates received
+2023/12/12 14:06:09:508869 : coordinates received #6
+2023/12/12 14:06:09:766795 : image received #6
+2023/12/12 14:06:10:111435 : image coordinates received
+2023/12/12 14:06:10:122775 : coordinates received #7
+2023/12/12 14:06:10:393512 : image received #7
+2023/12/12 14:06:10:736180 : image coordinates received
+2023/12/12 14:06:10:746112 : coordinates received #8
+2023/12/12 14:06:11:000918 : image received #8
+2023/12/12 14:06:11:344972 : image coordinates received
+2023/12/12 14:06:11:351865 : coordinates received #9
+2023/12/12 14:06:11:627687 : image received #9
+2023/12/12 14:06:11:968941 : image coordinates received
+2023/12/12 14:06:11:977700 : coordinates received #10
+2023/12/12 14:06:12:232803 : image received #10
+2023/12/12 14:06:12:578036 : image coordinates received
+2023/12/12 14:06:12:585892 : coordinates received #11
+2023/12/12 14:06:12:857011 : image received #11
+2023/12/12 14:06:13:200434 : image coordinates received
+2023/12/12 14:06:13:209188 : coordinates received #12
+2023/12/12 14:06:13:466621 : image received #12
+2023/12/12 14:06:13:809231 : image coordinates received
+2023/12/12 14:06:13:820861 : coordinates received #13
+2023/12/12 14:06:14:089311 : image received #13
+2023/12/12 14:06:14:431938 : image coordinates received
+2023/12/12 14:06:14:444297 : coordinates received #14
+2023/12/12 14:06:14:698311 : image received #14
+2023/12/12 14:06:15:043552 : image coordinates received
+2023/12/12 14:06:15:054784 : coordinates received #15
+2023/12/12 14:06:15:323456 : image received #15
+2023/12/12 14:06:16:102675 : path request received
+2023/12/12 14:06:16:120907 : path response sent
+2023/12/12 14:08:35:372698 : profiles received 
+2023/12/12 14:08:35:386548 : ==== new cycle 7
+2023/12/12 14:08:35:415610 : image coordinates received
+2023/12/12 14:08:35:427531 : coordinates received #1
+2023/12/12 14:08:35:651871 : image received #1
+2023/12/12 14:08:35:981000 : image coordinates received
+2023/12/12 14:08:35:988862 : coordinates received #2
+2023/12/12 14:08:36:264100 : image received #2
+2023/12/12 14:08:36:609377 : image coordinates received
+2023/12/12 14:08:36:621950 : coordinates received #3
+2023/12/12 14:08:36:874453 : image received #3
+2023/12/12 14:08:37:218743 : image coordinates received
+2023/12/12 14:08:37:229752 : coordinates received #4
+2023/12/12 14:08:37:498591 : image received #4
+2023/12/12 14:08:37:842578 : image coordinates received
+2023/12/12 14:08:37:855120 : coordinates received #5
+2023/12/12 14:08:38:107007 : image received #5
+2023/12/12 14:08:38:465089 : image coordinates received
+2023/12/12 14:08:38:479954 : coordinates received #6
+2023/12/12 14:08:38:731324 : image received #6
+2023/12/12 14:08:39:072833 : image coordinates received
+2023/12/12 14:08:39:078834 : coordinates received #7
+2023/12/12 14:08:39:353741 : image received #7
+2023/12/12 14:08:39:696084 : image coordinates received
+2023/12/12 14:08:39:709441 : coordinates received #8
+2023/12/12 14:08:39:963616 : image received #8
+2023/12/12 14:08:40:306266 : image coordinates received
+2023/12/12 14:08:40:314194 : coordinates received #9
+2023/12/12 14:08:40:587397 : image received #9
+2023/12/12 14:08:40:929117 : image coordinates received
+2023/12/12 14:08:40:942638 : coordinates received #10
+2023/12/12 14:08:41:194508 : image received #10
+2023/12/12 14:08:41:537099 : image coordinates received
+2023/12/12 14:08:41:543100 : coordinates received #11
+2023/12/12 14:08:41:817512 : image received #11
+2023/12/12 14:08:42:161376 : image coordinates received
+2023/12/12 14:08:42:170918 : coordinates received #12
+2023/12/12 14:08:42:428562 : image received #12
+2023/12/12 14:08:42:770596 : image coordinates received
+2023/12/12 14:08:42:780543 : coordinates received #13
+2023/12/12 14:08:43:049326 : image received #13
+2023/12/12 14:08:43:391978 : image coordinates received
+2023/12/12 14:08:43:402114 : coordinates received #14
+2023/12/12 14:08:43:672026 : image received #14
+2023/12/12 14:08:44:014038 : image coordinates received
+2023/12/12 14:08:44:026412 : coordinates received #15
+2023/12/12 14:08:44:279114 : image received #15
+2023/12/12 14:08:45:059889 : path request received
+2023/12/12 14:08:45:065894 : path response sent
+2023/12/12 14:12:58:359937 : profiles received 
+2023/12/12 14:12:58:372465 : ==== new cycle 2
+2023/12/12 14:12:58:387794 : image coordinates received
+2023/12/12 14:12:58:402235 : coordinates received #1
+2023/12/12 14:12:58:638228 : image received #1
+2023/12/12 14:12:58:981964 : image coordinates received
+2023/12/12 14:12:58:999327 : coordinates received #2
+2023/12/12 14:12:59:246181 : image received #2
+2023/12/12 14:12:59:603892 : image coordinates received
+2023/12/12 14:12:59:615376 : coordinates received #3
+2023/12/12 14:12:59:868407 : image received #3
+2023/12/12 14:13:00:213129 : image coordinates received
+2023/12/12 14:13:00:231457 : coordinates received #4
+2023/12/12 14:13:00:491627 : image received #4
+2023/12/12 14:13:00:834725 : image coordinates received
+2023/12/12 14:13:00:847665 : coordinates received #5
+2023/12/12 14:13:01:101960 : image received #5
+2023/12/12 14:13:01:444301 : image coordinates received
+2023/12/12 14:13:01:452118 : coordinates received #6
+2023/12/12 14:13:01:723549 : image received #6
+2023/12/12 14:13:02:066047 : image coordinates received
+2023/12/12 14:13:02:084199 : coordinates received #7
+2023/12/12 14:13:02:345378 : image received #7
+2023/12/12 14:13:02:688443 : image coordinates received
+2023/12/12 14:13:02:701471 : coordinates received #8
+2023/12/12 14:13:02:953537 : image received #8
+2023/12/12 14:13:03:297831 : image coordinates received
+2023/12/12 14:13:03:308360 : coordinates received #9
+2023/12/12 14:13:03:563243 : image received #9
+2023/12/12 14:13:03:921616 : image coordinates received
+2023/12/12 14:13:03:930633 : coordinates received #10
+2023/12/12 14:13:04:185788 : image received #10
+2023/12/12 14:13:04:530535 : image coordinates received
+2023/12/12 14:13:04:538674 : coordinates received #11
+2023/12/12 14:13:04:810763 : image received #11
+2023/12/12 14:13:05:139200 : image coordinates received
+2023/12/12 14:13:05:146414 : coordinates received #12
+2023/12/12 14:13:05:420056 : image received #12
+2023/12/12 14:13:05:763657 : image coordinates received
+2023/12/12 14:13:05:774015 : coordinates received #13
+2023/12/12 14:13:06:044556 : image received #13
+2023/12/12 14:13:06:386988 : image coordinates received
+2023/12/12 14:13:06:398304 : coordinates received #14
+2023/12/12 14:13:06:666155 : image received #14
+2023/12/12 14:13:07:009239 : image coordinates received
+2023/12/12 14:13:07:020136 : coordinates received #15
+2023/12/12 14:13:07:272546 : image received #15
+2023/12/12 14:13:08:055632 : path request received
+2023/12/12 14:13:08:066279 : path response sent
+2023/12/12 14:18:13:722411 : profiles received 
+2023/12/12 14:18:13:735931 : ==== new cycle 2
+2023/12/12 14:18:13:762507 : image coordinates received
+2023/12/12 14:18:13:769450 : coordinates received #1
+2023/12/12 14:18:13:932485 : image received #1
+2023/12/12 14:18:14:278718 : image coordinates received
+2023/12/12 14:18:14:285668 : coordinates received #2
+2023/12/12 14:18:14:558685 : image received #2
+2023/12/12 14:18:14:899257 : image coordinates received
+2023/12/12 14:18:14:909398 : coordinates received #3
+2023/12/12 14:18:15:179069 : image received #3
+2023/12/12 14:18:15:523945 : image coordinates received
+2023/12/12 14:18:15:533893 : coordinates received #4
+2023/12/12 14:18:15:789047 : image received #4
+2023/12/12 14:18:16:133685 : image coordinates received
+2023/12/12 14:18:16:141848 : coordinates received #5
+2023/12/12 14:18:16:397826 : image received #5
+2023/12/12 14:18:16:741522 : image coordinates received
+2023/12/12 14:18:16:758917 : coordinates received #6
+2023/12/12 14:18:17:023318 : image received #6
+2023/12/12 14:18:17:364880 : image coordinates received
+2023/12/12 14:18:17:371802 : coordinates received #7
+2023/12/12 14:18:17:630703 : image received #7
+2023/12/12 14:18:17:977016 : image coordinates received
+2023/12/12 14:18:17:983017 : coordinates received #8
+2023/12/12 14:18:18:258728 : image received #8
+2023/12/12 14:18:18:604392 : image coordinates received
+2023/12/12 14:18:18:611275 : coordinates received #9
+2023/12/12 14:18:18:870366 : image received #9
+2023/12/12 14:18:19:213484 : image coordinates received
+2023/12/12 14:18:19:219484 : coordinates received #10
+2023/12/12 14:18:19:496152 : image received #10
+2023/12/12 14:18:19:822716 : image coordinates received
+2023/12/12 14:18:19:832763 : coordinates received #11
+2023/12/12 14:18:20:105324 : image received #11
+2023/12/12 14:18:20:447870 : image coordinates received
+2023/12/12 14:18:20:455417 : coordinates received #12
+2023/12/12 14:18:20:713514 : image received #12
+2023/12/12 14:18:21:057365 : image coordinates received
+2023/12/12 14:18:21:067751 : coordinates received #13
+2023/12/12 14:18:21:339542 : image received #13
+2023/12/12 14:18:21:680483 : image coordinates received
+2023/12/12 14:18:21:692478 : coordinates received #14
+2023/12/12 14:18:21:962434 : image received #14
+2023/12/12 14:18:22:306051 : image coordinates received
+2023/12/12 14:18:22:315311 : coordinates received #15
+2023/12/12 14:18:22:572886 : image received #15
+2023/12/12 14:18:23:356307 : path request received
+2023/12/12 14:18:23:367217 : path response sent
