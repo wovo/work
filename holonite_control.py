@@ -85,7 +85,7 @@ class path_data:
     ):
         self._cycle = cycle
         self._coordinates = coordinates
-        self._images = iages
+        self._images = images
         self._profiles = profiles
         
     def plan_path( self ):    
@@ -533,7 +533,8 @@ if __name__ == '__main__':
             
             else:
                 data = path_data_from_file( sys.argv[ 2 ] )
-                data.plan_path()        
+                path = data.plan_path()        
+                print( f"{path}" )
             
         else:
             print( f"invalid command {sys.argv[ 1 ]}" )        
