@@ -1314,3 +1314,162 @@ Lib: Network error: 1236: The network connection was aborted by the local system
 2023/12/12 14:18:22:572886 : image received #15
 2023/12/12 14:18:23:356307 : path request received
 2023/12/12 14:18:23:367217 : path response sent
+2023/12/13 11:48:39:621246 : ===== startup
+2023/12/13 11:48:39:627297 : connect to the camera
+2023/12/13 11:48:39:633255 : connect MQTT
+2023/12/13 11:48:39:639255 : start the engine
+2023/12/13 11:48:39:726206 : camera connected
+2023/12/13 11:48:39:748147 : MQTT broker connected
+2023/12/13 11:48:43:971655 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/13 11:48:49:679260 : camera connected
+2023/12/13 11:48:49:692247 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/13 11:48:59:696940 : camera connected
+2023/12/13 11:48:59:705980 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/13 11:49:02:911308 : ===== startup
+2023/12/13 11:49:02:916863 : connect to the camera
+2023/12/13 11:49:02:922903 : connect MQTT
+2023/12/13 11:49:02:928461 : start the engine
+2023/12/13 11:49:02:961103 : camera connected
+2023/12/13 11:49:02:981725 : MQTT broker connected
+2023/12/13 11:52:05:957847 : ===== startup
+2023/12/13 11:52:05:963850 : connect to the camera
+2023/12/13 11:52:05:970001 : connect MQTT
+2023/12/13 11:52:05:975898 : start the engine
+2023/12/13 11:52:06:008171 : camera connected
+2023/12/13 11:52:06:032474 : MQTT broker connected
+2023/12/13 11:52:09:532970 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/13 11:52:16:040534 : camera connected
+2023/12/13 11:53:04:790462 : camera disconnected:
+Lib: Network error: 1236: The network connection was aborted by the local system.
+2023/12/13 11:53:07:831100 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/13 11:53:10:874429 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/13 11:53:10:944734 : camera connected
+2023/12/14 11:19:53:629669 : ===== startup
+2023/12/14 11:19:53:635580 : connect to the camera
+2023/12/14 11:19:53:642103 : connect MQTT
+2023/12/14 11:19:53:648137 : start the engine
+2023/12/14 11:19:53:748218 : camera connected
+2023/12/14 11:19:53:769362 : MQTT broker connected
+2023/12/14 11:19:59:152624 : profiles received 
+2023/12/14 11:20:23:065543 : ===== startup
+2023/12/14 11:20:23:071199 : connect to the camera
+2023/12/14 11:20:23:077177 : connect MQTT
+2023/12/14 11:20:23:083180 : start the engine
+2023/12/14 11:20:26:105033 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:29:140861 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:29:150847 : MQTT broker connected
+2023/12/14 11:20:32:176200 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:35:191708 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:38:222400 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:41:239084 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:44:262456 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:47:283082 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:50:301490 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:53:325257 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:56:359138 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:20:59:383980 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:02:407396 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:05:431542 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:08:455145 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:11:472549 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:14:514609 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:17:542196 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:20:573142 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:23:599109 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:26:618031 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:29:637585 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:32:656019 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:35:682190 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:38:725144 : camera not connected:
+Lib: XMLRPC Timeout - can you `ping' the sensor?
+2023/12/14 11:21:38:813051 : camera connected
+2023/12/14 11:23:16:239136 : profiles received 
+2023/12/14 11:23:16:247111 : ==== new cycle 18
+2023/12/14 11:23:16:265916 : image coordinates received
+2023/12/14 11:23:16:273451 : coordinates received #1
+2023/12/14 11:23:16:896821 : image received #1
+2023/12/14 11:23:16:904450 : image coordinates received
+2023/12/14 11:23:16:909494 : coordinates received #2
+2023/12/14 11:23:17:137779 : image received #2
+2023/12/14 11:23:17:463035 : image coordinates received
+2023/12/14 11:23:17:471865 : coordinates received #3
+2023/12/14 11:23:17:744610 : image received #3
+2023/12/14 11:23:18:086037 : image coordinates received
+2023/12/14 11:23:18:093829 : coordinates received #4
+2023/12/14 11:23:18:366511 : image received #4
+2023/12/14 11:23:18:693706 : image coordinates received
+2023/12/14 11:23:18:703653 : coordinates received #5
+2023/12/14 11:23:18:990984 : image received #5
+2023/12/14 11:23:19:318144 : image coordinates received
+2023/12/14 11:23:19:326826 : coordinates received #6
+2023/12/14 11:23:19:594241 : image received #6
+2023/12/14 11:23:19:937050 : image coordinates received
+2023/12/14 11:23:19:945913 : coordinates received #7
+2023/12/14 11:23:20:216192 : image received #7
+2023/12/14 11:23:20:541026 : image coordinates received
+2023/12/14 11:23:20:549833 : coordinates received #8
+2023/12/14 11:23:20:836822 : image received #8
+2023/12/14 11:23:21:161708 : image coordinates received
+2023/12/14 11:23:21:176101 : coordinates received #9
+2023/12/14 11:23:21:456691 : image received #9
+2023/12/14 11:23:21:785156 : image coordinates received
+2023/12/14 11:23:21:794110 : coordinates received #10
+2023/12/14 11:23:22:066775 : image received #10
+2023/12/14 11:23:22:409418 : image coordinates received
+2023/12/14 11:23:22:419738 : coordinates received #11
+2023/12/14 11:23:22:687185 : image received #11
+2023/12/14 11:23:23:016104 : image coordinates received
+2023/12/14 11:23:23:021614 : coordinates received #12
+2023/12/14 11:23:23:297533 : image received #12
+2023/12/14 11:23:23:638961 : image coordinates received
+2023/12/14 11:23:23:649603 : coordinates received #13
+2023/12/14 11:23:23:929787 : image received #13
+2023/12/14 11:23:24:256855 : image coordinates received
+2023/12/14 11:23:24:265597 : coordinates received #14
+2023/12/14 11:23:24:537319 : image received #14
+2023/12/14 11:23:24:879366 : image coordinates received
+2023/12/14 11:23:24:888348 : coordinates received #15
+2023/12/14 11:23:25:159080 : image received #15
+2023/12/14 11:23:25:934659 : path request received
+2023/12/14 11:28:00:849168 : ===== startup
+2023/12/14 11:28:00:855174 : connect to the camera
+2023/12/14 11:28:00:861173 : connect MQTT
+2023/12/14 11:28:00:867205 : start the engine
+2023/12/14 11:28:00:901353 : camera connected
+2023/12/14 11:28:00:922284 : MQTT broker connected
+2023/12/14 11:28:11:253245 : ===== startup
+2023/12/14 11:28:11:259759 : connect to the camera
+2023/12/14 11:28:11:265756 : connect MQTT
+2023/12/14 11:28:11:271267 : start the engine
+2023/12/14 11:28:11:317282 : camera connected
+2023/12/14 11:28:11:369111 : MQTT broker connected

@@ -14,8 +14,6 @@
 # - dump a mould that gives an error? pickle?
 # - save data, for later playback
 # - playback tool for kamal
-# - handle Mqtt not available timeout
-# - camera disconnect gives loads of message, wait some time before retry?
 #
 # ===========================================================================
 
@@ -25,6 +23,7 @@ import json
 import pickle
 import datetime
 import os
+import sys
 
 
 # MQTT
@@ -76,8 +75,14 @@ def now_string( filename = False ):
 def now_filename():
     return now_string().replace( "/", "-" ).replace( ":", "-" )
     
-class data:
-    def __init__( self, cycle, coordinates, images, profiles )
+class path_data:
+    def __init__( 
+        self, 
+        cycle, 
+        coordinates, 
+        images, 
+        profiles
+    ):
         self._cycle = cycle
         self._coordinates = coordinates
         self._images = iages
@@ -90,6 +95,16 @@ class data:
             self._images,
             self._profiles
         )
+        
+    def dump( self ):
+        with open( f"{now_filename()}.pickle", "wb" ) as file:
+            pickle.dump( self, file )
+            
+def path_data_from_file( file_name ):
+    if file_name.find( "." ) < 0:
+        file_name += ".pickle"
+    with open( file_name, "rb" ) as file:
+        return pickle.load( file )   
 
 
 # ===========================================================================
@@ -100,13 +115,19 @@ class data:
 
 class mqtt_client:
 
-    def __init__( self, config, log ): 
+    # =======================================================================        
+    
+    def __init__( 
+        self, 
+        config, 
+        log 
+    ) -> None:
         client_id = f'publish-{random.randint(0, 1000)}'
         self._client = paho_mqtt.Client( client_id )
         self._log = log
-        self._connected = False
+        self.connected = False
         self._config = config
-        self._last_attempt = time.time() - self._config.reconnect_timout
+        self._last_attempt = 0
         self._subscriptions = []
         
         self._client.on_connect = \
@@ -117,8 +138,10 @@ class mqtt_client:
             self._config.password 
         )
         
-    def _connect( self ):
-        if self._connected:
+    # =======================================================================        
+
+    def _connect( self ) -> None:
+        if self.connected:
             return
             
         if time.time() - self._last_attempt < self._config.reconnect_timout:   
@@ -131,22 +154,39 @@ class mqtt_client:
             )       
             for topic_name, callback in self._subscriptions:
                 self._subscribe( topic_name, callback )
-            self._connected = True
+            self.connected = True
             
         except TimeoutError as e:    
             self._log( f"MQTT not connected:\n{e}" )            
 
-    def on_connect( self, client, userdata, flags, rc ) :
+    # =======================================================================        
+
+    def on_connect( 
+        self, 
+        client, 
+        userdata, 
+        flags, 
+        rc 
+    ) -> None:
         if rc == 0:
             self._log( "MQTT broker connected")
         else:
-            self._log( f"Failed to connect, return code {rc}\n")        
+            self._log( f"Failed to connect, return code {rc}\n")     
+            self.connected = True            
             
-    def spin_once( self ):
+    # =======================================================================        
+
+    def spin_once( self ) -> None:
         self._connect()
         self._client.loop( timeout = 0 )   
 
-    def _subscribe( self, topic_name, callback ):  
+    # =======================================================================        
+
+    def _subscribe( 
+        self, 
+        topic_name, 
+        callback 
+    ) -> None:
         self._client.subscribe( topic_name )            
         self._client.message_callback_add(
             topic_name,
@@ -154,18 +194,35 @@ class mqtt_client:
                 callback( json.loads( message.payload.decode()) )
         )   
         
-    def subscribe( self, topic_name, callback ):  
+    # =======================================================================        
+
+    def subscribe( 
+        self, 
+        topic_name: str, 
+        callback 
+    ) -> None:
         self._subscriptions.append( [ topic_name, callback ] )
-        if self._connected:
+        if self.connected:
             self._subscribe( topic_name, callback )
         
-    def publish( self, topic, data ):
-        self._client.publish( 
-            topic, 
-            payload = json.dumps( data ),
-            qos = 0, 
-            retain = False
-        ) 
+    # =======================================================================    
+    # publish data to the PLC via the MQTT server
+    # =======================================================================    
+
+    def publish( 
+        self, 
+        topic: str, 
+        data: dict[ str, any ]
+    ) -> None:
+        if self.connected:
+            self._client.publish( 
+                topic, 
+                payload = json.dumps( data ),
+                qos = 0, 
+                retain = False
+            ) 
+
+    # =======================================================================        
             
 
 # ===========================================================================
@@ -176,40 +233,57 @@ class mqtt_client:
 
 class camera:
 
-    def __init__( self, config, callback, log ):
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
+    def __init__( 
+        self, 
+        config, 
+        callback, 
+        log 
+    ) -> None:
         self._callback = callback
-        self._frame = None
         self._config = config
-        self._connected = False
+        self.connected = False
         self._log = log
-        self._last_attempt = time.time() - self._config.reconnect_timout
+        self._last_attempt = 0
         
-    def _connect( self ):
-        if self._connected:
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
+    def _connect( self ) -> None:
+        if self.connected:
             return
             
         if  time.time() - self._last_attempt< self._config.reconnect_timout:   
             return
             
         try:
-        
-            self._last_attempt = time.time()
+            self._frame = None        
             self._camera = ifm3dpy.device.Device( ip = self._config.address )
             self._grabber = ifm3dpy.framegrabber.FrameGrabber( self._camera )
-            self._grabber.start()  
-            self._connected = True
+            self._grabber.start()       
+            
+            self._last_attempt = time.time() 
+            self.connected = True
             self._log( "camera connected" )
             
         except Exception as e:
             self._log( f"camera not connected:\n{e}" )
 
-    def spin_once( self ):
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
+    def spin_once( self ) -> None:
         self._connect()
         
-        if not self._connected:
+        if not self.connected:
             return
     
-        try:
+        try:            
             if self._frame is None:
                 self._frame = self._grabber.wait_for_frame()
             
@@ -220,9 +294,10 @@ class camera:
                 self._callback( buffer )            
                 
         except Exception as e:
-            self._connected = False
+            self.connected = False
             self._log( f"camera disconnected:\n{e }" )                
 
+    # =======================================================================    
 
 # ===========================================================================
 #
@@ -232,17 +307,21 @@ class camera:
 
 class holonite_automatic_waxing_machine_controller:
 
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def __init__( 
         self, 
         camera_config, 
         mqtt_config,
         log_file_name = None,
-        dump_profiles = False,
+        dump_data = False,
         dump_path_errors = False
     ):
     
         self._log_file_name = log_file_name
-        self._dump_profiles = dump_profiles
+        self._dump_data = dump_data
         self._dump_path_errors = dump_path_errors
         self._log( "===== startup" )
         self._log( "connect to the camera" )
@@ -273,23 +352,34 @@ class holonite_automatic_waxing_machine_controller:
         self._reset()
         self._log( "start the engine" )
         
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def spin_once( self ):
         self._camera.spin_once()
         self._mqtt.spin_once()      
         
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def spin( self, sleep_time = 0.001 ):
         while True:
             self.spin_once()
             time.sleep( sleep_time )
             
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def _log( self, message ):
         s = f"{now_string()} : {message}"
         print( s )
         if self._log_file_name is not None:
             with open( self._log_file_name, "a+" ) as log_file:
                 log_file.write( s + "\n" )
-                    
-            
+                       
     # =======================================================================        
     #
     # processing "state machine"
@@ -303,6 +393,10 @@ class holonite_automatic_waxing_machine_controller:
         self._cycle = None  
         self._profiles = None      
         
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def _update_cycle( self, data, forced = False ):
         cycle = data[ "cycle" ]
         if ( cycle != self._cycle ) or forced:
@@ -310,19 +404,28 @@ class holonite_automatic_waxing_machine_controller:
             self._reset()    
             self._cycle = cycle        
             
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def _receive_image( self, data ):
         self._log( f"image received #{1+len(self._images)}" )
         self._images.append( data )
         
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def _receive_profiles( self, data ):
         self._log( "profiles received " )
-        if self._dump_profiles:
-            with open( f"profile-{self._cycle}.json", "w" ) as dump_file:
-                dump_file.write( f"{data}" )
         self._update_cycle( data, forced = True )
         self._profiles = data[ "heights" ]
         #with open( f"profiles-{self._cycle}.pickle", "wb" ) as file:
         #    pickle.dump( self._profiles, file)
+
+    # =======================================================================    
+    # 
+    # =======================================================================    
 
     def _receive_image_coordinates( self, data ):
         self._log( "image coordinates received" )
@@ -332,6 +435,10 @@ class holonite_automatic_waxing_machine_controller:
         self._log( f"coordinates received #{1+len(self._coordinates)}" )        
         self._coordinates.append( coordinate )      
 
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def _receive_path_request( self, data ):
         self._log( "path request received" )
         self._update_cycle( data )
@@ -340,6 +447,10 @@ class holonite_automatic_waxing_machine_controller:
         if n != self._expected_number_of_images:
             self._send_path_error( f"invalid number of coordinates: {n}" )
             return
+            
+        if not self._camera.connected:
+            self._send_path_error( "camera not connected" )
+            return        
             
         n = len( self._images )
         if n != self._expected_number_of_images:
@@ -355,7 +466,10 @@ class holonite_automatic_waxing_machine_controller:
             self._coordinates, 
             self._images, 
             self._profiles 
-            )  
+        )  
+        
+        if self._dump_data:
+            data.dump()
             
         try:    
             path = data.plan_path()
@@ -379,6 +493,10 @@ class holonite_automatic_waxing_machine_controller:
             
         self._send_path_response( path )    
         
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def _send_path_response( self, path ):
         self._log( "path response sent" )
         self._mqtt.publish( 
@@ -386,6 +504,10 @@ class holonite_automatic_waxing_machine_controller:
             path 
         )
     
+    # =======================================================================    
+    # 
+    # =======================================================================    
+
     def _send_path_error( self, error ):
         self._log( f"path error sent [{error}]" )    
         self._mqtt.publish( 
@@ -402,14 +524,29 @@ class holonite_automatic_waxing_machine_controller:
 # ===========================================================================      
 
 if __name__ == '__main__':
-    m = holonite_automatic_waxing_machine_controller( 
-        camera_config = wouter_camera, 
-        mqtt_config = carlos_mqtt,
-        log_file_name = "logging.txt",
-        dump_profiles = True,
-        dump_path_errors = True
-    )
-    m.spin()
+    if len( sys.argv ) > 1:
+    
+        if sys.argv[ 1 ] == "read":
+        
+            if len( sys.argv ) < 3:
+                print( "specify a file name" )
+            
+            else:
+                data = path_data_from_file( sys.argv[ 2 ] )
+                data.plan_path()        
+            
+        else:
+            print( f"invalid command {sys.argv[ 1 ]}" )        
+    
+    else:
+        m = holonite_automatic_waxing_machine_controller( 
+            camera_config = wouter_camera, 
+            mqtt_config = carlos_mqtt,
+            log_file_name = "logging.txt",
+            dump_data = True,
+            dump_path_errors = True
+        )
+        m.spin()
 
     
 # ===========================================================================

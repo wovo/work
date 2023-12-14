@@ -1,0 +1,18 @@
+Holonite action list
+
+- fix internet
+- lamp signaling for norml -> stop or passthrough requested
+- tie-wrap replacement
+- stopper sensor - usefull?
+- enough X movement?
+- camera pole cutoff
+- waterproofing the system
+- cable Y movement fixup
+- some plates I could not identify
+- door switch
+- test text update: when to remove a mould
+- system test is now chaos
+- write stopper-up in system text
+- write througput calcuation
+- write outbound area calculation
+- save data for kamal, kamal tool
