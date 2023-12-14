@@ -100,6 +100,16 @@ class path_data:
         with open( f"{now_filename()}.pickle", "wb" ) as file:
             pickle.dump( self, file )
             
+    def dump_images( self ):
+        for n, buffer in enumerate( self._images ):
+            with open( f"image-{n}.ppm", "w" ) as f:
+                m = max( [ max( line ) for line in buffer ] )
+                f.write( f"P3 {len( buffer[ 0 ] )} {len( buffer )} {m}\n" )
+                for line in buffer:
+                    for pixel in line:
+                        f.write( f"{pixel} {pixel} {pixel} " )
+                    f.write( "\n" ) 
+            
 def path_data_from_file( file_name ):
     if file_name.find( "." ) < 0:
         file_name += ".pickle"
@@ -289,7 +299,7 @@ class camera:
             
             ready, frame = self._frame.wait_for( 0 )   
             if ready:
-                buffer = frame.get_buffer( frame.get_buffers()[ 0 ] )
+                buffer = frame.get_buffer( frame.get_buffers()[ 4 ] )
                 self._frame = self._grabber.wait_for_frame()
                 self._callback( buffer )            
                 
@@ -537,6 +547,15 @@ if __name__ == '__main__':
                 data = path_data_from_file( sys.argv[ 2 ] )
                 path = data.plan_path()        
                 print( f"{path}" )
+            
+        elif sys.argv[ 1 ] == "dump":
+        
+            if len( sys.argv ) < 3:
+                print( "specify a file name" )
+            
+            else:
+                data = path_data_from_file( sys.argv[ 2 ] )
+                data.dump_images()
             
         else:
             print( f"invalid command {sys.argv[ 1 ]}" )        

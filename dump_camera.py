@@ -10,7 +10,7 @@ def waiting( x ):
        time.sleep( 0.5 )
        
 def save( frame ):   
-    buffer = frame.get_buffer( frame.get_buffers()[ 4 ] )
+    buffer = frame.get_buffer( frame.get_buffers()[ 0 ] )
     print( buffer )
     with open( "x.ppm", "w" ) as f:
         m = max( [ max( line ) for line in buffer ] )
