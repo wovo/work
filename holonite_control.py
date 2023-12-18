@@ -46,7 +46,7 @@ def plan_path(
     images, 
     profiles 
 ):
-    spray_plan = spray_planner.spray_planner(
+    spray_plan = spray_planner.spray_plan(
         cycle = cycle, 
         depths = images, 
         profiles = profiles
