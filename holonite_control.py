@@ -26,6 +26,9 @@ import os
 import sys
 import pathlib
 
+sys.path.append('../../')  # Navigate two directories up
+import vision.main_spray_planner as spray_planner
+
 # MQTT
 from paho.mqtt import client as paho_mqtt
 
@@ -46,7 +49,14 @@ def plan_path(
     images, 
     profiles 
 ):
-    return carlos_path.carlos_path( cycle )
+    spray_plan = spray_planner.spray_plan(
+        cycle = cycle, 
+        depths = images, 
+        profiles = profiles
+    )
+    print("--returned above spray_planner--")
+    print(spray_plan)
+    return spray_plan
 
 
 # ===========================================================================

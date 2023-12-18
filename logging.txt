@@ -163,3 +163,9 @@
 2023/12/18 10:26:31:030279 : image received #15
 2023/12/18 10:26:31:809946 : path request received
 2023/12/18 10:26:31:821413 : path response sent
+2023/12/18 13:43:45:191142 : ===== startup
+2023/12/18 13:43:45:198648 : connect to the camera
+2023/12/18 13:43:45:205048 : connect MQTT
+2023/12/18 13:43:45:212560 : start the engine
+2023/12/18 13:43:45:246103 : camera connected
+2023/12/18 13:43:45:285634 : MQTT broker connected
