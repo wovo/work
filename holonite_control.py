@@ -26,18 +26,15 @@ import os
 import sys
 import pathlib
 
-sys.path.append('../../')  # Navigate two directories up
-import vision.main_spray_planner as spray_planner
-
 # MQTT
 from paho.mqtt import client as paho_mqtt
 
 # camera
 import ifm3dpy
 
-# stubbed path
 import patherror
-import carlos_path
+sys.path.append('../../')  # Navigate two directories up
+import vision.main_spray_planner as spray_planner
 
 
 # ===========================================================================
@@ -49,7 +46,7 @@ def plan_path(
     images, 
     profiles 
 ):
-    spray_plan = spray_planner.spray_plan(
+    spray_plan = spray_planner.spray_planner(
         cycle = cycle, 
         depths = images, 
         profiles = profiles
@@ -110,7 +107,7 @@ class path_data:
             )            
 
         except patherror.PathError as e:
-            self.error = e
+            self.error = str( e )
         
     def dump( 
         self, 
@@ -512,10 +509,10 @@ class holonite_automatic_waxing_machine_controller:
         )  
         
         data.plan_path()
-        if data.path is not None:
-            self._send_path_response( data.path )
+        if data.path is None:
+            self._send_path_error( data.error )
         else:            
-            self._send_path_error( str( e ) )
+            self._send_path_response( data.path )
             
         if self._dump_data:
             data.dump()            
@@ -563,8 +560,9 @@ if __name__ == '__main__':
             
             else:
                 data = path_data_from_file( sys.argv[ 2 ] )
-                path = data.plan_path()        
-                print( f"{path}" )
+                data.plan_path()        
+                print( f"path = {data.path}" )
+                print( f"error = {data.error}" )
             
         elif sys.argv[ 1 ] == "dump":
         

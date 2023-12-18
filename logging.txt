@@ -175,3 +175,220 @@
 2023/12/18 13:45:11:848215 : start the engine
 2023/12/18 13:45:11:882154 : camera connected
 2023/12/18 13:45:11:897543 : MQTT broker connected
+2023/12/18 16:05:10:576348 : ===== startup
+2023/12/18 16:05:10:582346 : connect to the camera
+2023/12/18 16:05:10:587385 : connect MQTT
+2023/12/18 16:05:10:592866 : start the engine
+2023/12/18 16:05:10:677249 : camera connected
+2023/12/18 16:05:10:704421 : MQTT broker connected
+2023/12/18 16:06:51:590216 : profiles received 
+2023/12/18 16:06:51:595222 : ==== new cycle 5
+2023/12/18 16:06:51:617652 : image coordinates received
+2023/12/18 16:06:51:623757 : coordinates received #1
+2023/12/18 16:06:52:070660 : image received #1
+2023/12/18 16:06:52:197177 : image coordinates received
+2023/12/18 16:06:52:213985 : coordinates received #2
+2023/12/18 16:06:52:478720 : image received #2
+2023/12/18 16:06:52:806612 : image coordinates received
+2023/12/18 16:06:52:818279 : coordinates received #3
+2023/12/18 16:06:53:102059 : image received #3
+2023/12/18 16:06:53:431945 : image coordinates received
+2023/12/18 16:06:53:443830 : coordinates received #4
+2023/12/18 16:06:53:710526 : image received #4
+2023/12/18 16:06:54:057694 : image coordinates received
+2023/12/18 16:06:54:068809 : coordinates received #5
+2023/12/18 16:06:54:341210 : image received #5
+2023/12/18 16:06:54:664385 : image coordinates received
+2023/12/18 16:06:54:673316 : coordinates received #6
+2023/12/18 16:06:54:946184 : image received #6
+2023/12/18 16:06:55:276955 : image coordinates received
+2023/12/18 16:06:55:288799 : coordinates received #7
+2023/12/18 16:06:55:574329 : image received #7
+2023/12/18 16:06:55:900330 : image coordinates received
+2023/12/18 16:06:55:913713 : coordinates received #8
+2023/12/18 16:06:56:182675 : image received #8
+2023/12/18 16:06:56:511678 : image coordinates received
+2023/12/18 16:06:56:524736 : coordinates received #9
+2023/12/18 16:06:56:809864 : image received #9
+2023/12/18 16:06:57:140519 : image coordinates received
+2023/12/18 16:06:57:148834 : coordinates received #10
+2023/12/18 16:06:57:423950 : image received #10
+2023/12/18 16:06:57:753683 : image coordinates received
+2023/12/18 16:06:57:767314 : coordinates received #11
+2023/12/18 16:06:58:036702 : image received #11
+2023/12/18 16:06:58:380269 : image coordinates received
+2023/12/18 16:06:58:392219 : coordinates received #12
+2023/12/18 16:06:58:661064 : image received #12
+2023/12/18 16:06:58:987526 : image coordinates received
+2023/12/18 16:06:59:002505 : coordinates received #13
+2023/12/18 16:06:59:269654 : image received #13
+2023/12/18 16:06:59:611475 : image coordinates received
+2023/12/18 16:06:59:621947 : coordinates received #14
+2023/12/18 16:06:59:893002 : image received #14
+2023/12/18 16:07:00:222709 : image coordinates received
+2023/12/18 16:07:00:228712 : coordinates received #15
+2023/12/18 16:07:00:517620 : image received #15
+2023/12/18 16:07:01:287126 : path request received
+2023/12/18 16:08:36:093742 : ===== startup
+2023/12/18 16:08:36:100350 : connect to the camera
+2023/12/18 16:08:36:107348 : connect MQTT
+2023/12/18 16:08:36:112897 : start the engine
+2023/12/18 16:08:36:145894 : camera connected
+2023/12/18 16:08:36:165601 : MQTT broker connected
+2023/12/18 16:09:24:589536 : profiles received 
+2023/12/18 16:09:24:596207 : ==== new cycle 6
+2023/12/18 16:09:24:616832 : image coordinates received
+2023/12/18 16:09:24:628117 : coordinates received #1
+2023/12/18 16:09:24:981113 : image received #1
+2023/12/18 16:09:25:207316 : image coordinates received
+2023/12/18 16:09:25:217813 : coordinates received #2
+2023/12/18 16:09:25:488747 : image received #2
+2023/12/18 16:09:25:817173 : image coordinates received
+2023/12/18 16:09:25:826039 : coordinates received #3
+2023/12/18 16:09:26:097970 : image received #3
+2023/12/18 16:09:26:440760 : image coordinates received
+2023/12/18 16:09:26:458240 : coordinates received #4
+2023/12/18 16:09:26:721353 : image received #4
+2023/12/18 16:09:27:065642 : image coordinates received
+2023/12/18 16:09:27:073570 : coordinates received #5
+2023/12/18 16:09:27:346232 : image received #5
+2023/12/18 16:09:27:672915 : image coordinates received
+2023/12/18 16:09:27:692578 : coordinates received #6
+2023/12/18 16:09:27:954553 : image received #6
+2023/12/18 16:09:28:285810 : image coordinates received
+2023/12/18 16:09:28:303776 : coordinates received #7
+2023/12/18 16:09:28:581409 : image received #7
+2023/12/18 16:09:28:910143 : image coordinates received
+2023/12/18 16:09:28:926505 : coordinates received #8
+2023/12/18 16:09:29:190727 : image received #8
+2023/12/18 16:09:29:535735 : image coordinates received
+2023/12/18 16:09:29:550412 : coordinates received #9
+2023/12/18 16:09:29:815820 : image received #9
+2023/12/18 16:09:30:144662 : image coordinates received
+2023/12/18 16:09:30:156342 : coordinates received #10
+2023/12/18 16:09:30:426412 : image received #10
+2023/12/18 16:09:30:756002 : image coordinates received
+2023/12/18 16:09:30:767033 : coordinates received #11
+2023/12/18 16:09:31:052392 : image received #11
+2023/12/18 16:09:31:379658 : image coordinates received
+2023/12/18 16:09:31:389899 : coordinates received #12
+2023/12/18 16:09:31:660604 : image received #12
+2023/12/18 16:09:32:003792 : image coordinates received
+2023/12/18 16:09:32:021482 : coordinates received #13
+2023/12/18 16:09:32:284149 : image received #13
+2023/12/18 16:09:32:612576 : image coordinates received
+2023/12/18 16:09:32:625146 : coordinates received #14
+2023/12/18 16:09:32:909471 : image received #14
+2023/12/18 16:09:33:237929 : image coordinates received
+2023/12/18 16:09:33:255314 : coordinates received #15
+2023/12/18 16:09:33:519325 : image received #15
+2023/12/18 16:09:34:283754 : path request received
+2023/12/18 16:15:03:924560 : ===== startup
+2023/12/18 16:15:03:932069 : connect to the camera
+2023/12/18 16:15:03:939141 : connect MQTT
+2023/12/18 16:15:03:946495 : start the engine
+2023/12/18 16:15:03:979710 : camera connected
+2023/12/18 16:15:03:999350 : MQTT broker connected
+2023/12/18 16:15:29:707900 : profiles received 
+2023/12/18 16:15:29:716616 : ==== new cycle 7
+2023/12/18 16:15:29:731198 : image coordinates received
+2023/12/18 16:15:29:737179 : coordinates received #1
+2023/12/18 16:15:30:090546 : image received #1
+2023/12/18 16:15:30:326295 : image coordinates received
+2023/12/18 16:15:30:344162 : coordinates received #2
+2023/12/18 16:15:30:607454 : image received #2
+2023/12/18 16:15:30:936782 : image coordinates received
+2023/12/18 16:15:30:950731 : coordinates received #3
+2023/12/18 16:15:31:218865 : image received #3
+2023/12/18 16:15:31:560278 : image coordinates received
+2023/12/18 16:15:31:578793 : coordinates received #4
+2023/12/18 16:15:31:841054 : image received #4
+2023/12/18 16:15:32:169500 : image coordinates received
+2023/12/18 16:15:32:186267 : coordinates received #5
+2023/12/18 16:15:32:466149 : image received #5
+2023/12/18 16:15:32:793012 : image coordinates received
+2023/12/18 16:15:32:799027 : coordinates received #6
+2023/12/18 16:15:33:072750 : image received #6
+2023/12/18 16:15:33:415753 : image coordinates received
+2023/12/18 16:15:33:432340 : coordinates received #7
+2023/12/18 16:15:33:698850 : image received #7
+2023/12/18 16:15:34:026269 : image coordinates received
+2023/12/18 16:15:34:036210 : coordinates received #8
+2023/12/18 16:15:34:306047 : image received #8
+2023/12/18 16:15:34:646986 : image coordinates received
+2023/12/18 16:15:34:664647 : coordinates received #9
+2023/12/18 16:15:34:911306 : image received #9
+2023/12/18 16:15:35:256364 : image coordinates received
+2023/12/18 16:15:35:275325 : coordinates received #10
+2023/12/18 16:15:35:536935 : image received #10
+2023/12/18 16:15:35:882374 : image coordinates received
+2023/12/18 16:15:35:894319 : coordinates received #11
+2023/12/18 16:15:36:148389 : image received #11
+2023/12/18 16:15:36:491144 : image coordinates received
+2023/12/18 16:15:36:504115 : coordinates received #12
+2023/12/18 16:15:36:772177 : image received #12
+2023/12/18 16:15:37:115526 : image coordinates received
+2023/12/18 16:15:37:132438 : coordinates received #13
+2023/12/18 16:15:37:395338 : image received #13
+2023/12/18 16:15:37:723796 : image coordinates received
+2023/12/18 16:15:37:730760 : coordinates received #14
+2023/12/18 16:15:38:005356 : image received #14
+2023/12/18 16:15:38:346437 : image coordinates received
+2023/12/18 16:15:38:359394 : coordinates received #15
+2023/12/18 16:15:38:626818 : image received #15
+2023/12/18 16:15:39:407593 : path request received
+2023/12/18 16:16:46:883319 : ===== startup
+2023/12/18 16:16:46:889825 : connect to the camera
+2023/12/18 16:16:46:895826 : connect MQTT
+2023/12/18 16:16:46:901829 : start the engine
+2023/12/18 16:16:46:934711 : camera connected
+2023/12/18 16:16:46:957602 : MQTT broker connected
+2023/12/18 16:17:21:852509 : profiles received 
+2023/12/18 16:17:21:859451 : ==== new cycle 8
+2023/12/18 16:17:21:876350 : image coordinates received
+2023/12/18 16:17:21:884267 : coordinates received #1
+2023/12/18 16:17:22:244149 : image received #1
+2023/12/18 16:17:22:470345 : image coordinates received
+2023/12/18 16:17:22:481385 : coordinates received #2
+2023/12/18 16:17:22:737593 : image received #2
+2023/12/18 16:17:23:080629 : image coordinates received
+2023/12/18 16:17:23:098481 : coordinates received #3
+2023/12/18 16:17:23:360332 : image received #3
+2023/12/18 16:17:23:705788 : image coordinates received
+2023/12/18 16:17:23:720309 : coordinates received #4
+2023/12/18 16:17:23:973543 : image received #4
+2023/12/18 16:17:24:315034 : image coordinates received
+2023/12/18 16:17:24:327502 : coordinates received #5
+2023/12/18 16:17:24:595807 : image received #5
+2023/12/18 16:17:24:939142 : image coordinates received
+2023/12/18 16:17:24:956057 : coordinates received #6
+2023/12/18 16:17:25:205226 : image received #6
+2023/12/18 16:17:25:549250 : image coordinates received
+2023/12/18 16:17:25:556955 : coordinates received #7
+2023/12/18 16:17:25:829970 : image received #7
+2023/12/18 16:17:26:174212 : image coordinates received
+2023/12/18 16:17:26:187643 : coordinates received #8
+2023/12/18 16:17:26:439533 : image received #8
+2023/12/18 16:17:26:784010 : image coordinates received
+2023/12/18 16:17:26:801287 : coordinates received #9
+2023/12/18 16:17:27:063844 : image received #9
+2023/12/18 16:17:27:408006 : image coordinates received
+2023/12/18 16:17:27:421347 : coordinates received #10
+2023/12/18 16:17:27:673364 : image received #10
+2023/12/18 16:17:28:018909 : image coordinates received
+2023/12/18 16:17:28:027852 : coordinates received #11
+2023/12/18 16:17:28:300937 : image received #11
+2023/12/18 16:17:28:642657 : image coordinates received
+2023/12/18 16:17:28:661003 : coordinates received #12
+2023/12/18 16:17:28:924497 : image received #12
+2023/12/18 16:17:29:253863 : image coordinates received
+2023/12/18 16:17:29:267456 : coordinates received #13
+2023/12/18 16:17:29:532708 : image received #13
+2023/12/18 16:17:29:877638 : image coordinates received
+2023/12/18 16:17:29:897365 : coordinates received #14
+2023/12/18 16:17:30:158807 : image received #14
+2023/12/18 16:17:30:488913 : image coordinates received
+2023/12/18 16:17:30:504838 : coordinates received #15
+2023/12/18 16:17:30:771173 : image received #15
+2023/12/18 16:17:31:555377 : path request received
+2023/12/18 16:17:31:568535 : path error sent [Hi Carlos, time for lunch]
