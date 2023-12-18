@@ -24,7 +24,7 @@ import pickle
 import datetime
 import os
 import sys
-
+import pathlib
 
 # MQTT
 from paho.mqtt import client as paho_mqtt
@@ -83,25 +83,35 @@ class path_data:
         images, 
         profiles
     ):
-        self._cycle = cycle
-        self._coordinates = coordinates
-        self._images = images
-        self._profiles = profiles
+        self.cycle = cycle
+        self.coordinates = coordinates
+        self.images = images
+        self.profiles = profiles
+        self.path = None
+        self.exception = None
         
     def plan_path( self ):    
-        return plan_path(
-            self._cycle,
-            self._coordinates,
-            self._images,
-            self._profiles
-        )
+        try:    
+            self.path = plan_path(
+                self.cycle,
+                self.coordinates,
+                self.images,
+                self.profiles
+            )            
+
+        except patherror.PathError as e:
+            self.error = e
         
-    def dump( self ):
-        with open( f"{now_filename()}.pickle", "wb" ) as file:
+    def dump( 
+        self, 
+        directory = "dumps/" 
+    ):
+        pathlib.Path( directory ).mkdir( parents = True, exist_ok = True )    
+        with open( f"{directory}/{now_filename()}.pickle", "wb" ) as file:
             pickle.dump( self, file )
             
     def dump_images( self ):
-        for n, buffer in enumerate( self._images ):
+        for n, buffer in enumerate( self.images ):
             with open( f"image-{n}.ppm", "w" ) as f:
                 m = max( [ max( line ) for line in buffer ] )
                 f.write( f"P3 {len( buffer[ 0 ] )} {len( buffer )} {m}\n" )
@@ -109,6 +119,19 @@ class path_data:
                     for pixel in line:
                         f.write( f"{pixel} {pixel} {pixel} " )
                     f.write( "\n" ) 
+                    
+    def set_error( 
+        self, 
+        error: str
+    ) -> None:
+        self.error = error
+
+    def set_path( 
+        self, 
+        path 
+    ) -> None:
+        self.path = path
+        
             
 def path_data_from_file( file_name ):
     if file_name.find( "." ) < 0:
@@ -478,30 +501,15 @@ class holonite_automatic_waxing_machine_controller:
             self._profiles 
         )  
         
-        if self._dump_data:
-            data.dump()
-            
-        try:    
-            path = data.plan_path()
-
-        except patherror.PathError as e:
+        data.plan_path()
+        if data.path is not None:
+            self._send_path_response( data.path )
+        else:            
             self._send_path_error( str( e ) )
             
-            if False and self._dump_path_errors:
-                path = f"path-error-{now_filename()}"
-                os.makedirs( path, exist_ok = True )
-                with open( f"{path}/error.txt", "w" ) as file:
-                    file.write( f"{e}" )                  
-                with open( f"{path}/profile.pickle", "w" ) as file:
-                    pickle.dump( self._profiles, file )       
-                for n, image in enumerate( self._images ):
-                    with open( f"{path}/image-{n}.pickle", "w" ) as file:
-                        pickle.dump( image, file)      
-                
+        if self._dump_data:
+            data.dump()            
             
-            return
-            
-        self._send_path_response( path )    
         
     # =======================================================================    
     # 
