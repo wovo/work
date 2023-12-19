@@ -560,9 +560,13 @@ if __name__ == '__main__':
             
             else:
                 data = path_data_from_file( sys.argv[ 2 ] )
-                data.plan_path()        
-                print( f"path = {data.path}" )
-                print( f"error = {data.error}" )
+                data.path = None
+                data.error = None
+                data.plan_path() 
+                if data.path is None:
+                    print( f"error = {data.error}" )
+                else:
+                    print( f"path = {data.path}" )
             
         elif sys.argv[ 1 ] == "dump":
         
